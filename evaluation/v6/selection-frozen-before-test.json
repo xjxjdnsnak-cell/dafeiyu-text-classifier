@@ -1,0 +1,931 @@
+{
+  "selected_trial": "ordinary3_dim16",
+  "recommended_format": "bin",
+  "recommended_model": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\models-text-specialist-20261114-v6\\text\\model.bin",
+  "test_used_for_selection": false,
+  "models": {
+    "baseline": {
+      "path": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\models-text-specialist-20261114-v6\\candidates\\baseline.bin",
+      "sha256": "09b1743de787c865fd558432ac64d585f4e980d02612cc6a94e74f6ab2375685",
+      "working_points": {
+        "0.01": {
+          "threshold": 0.9847227542735736,
+          "max_validation_fpr": 0.01,
+          "selection_rule": "maximize recall under empirical FPR cap, then precision/F1, then larger threshold; score >= threshold",
+          "metrics": {
+            "precision": 0.9765013054830287,
+            "recall": 0.7816091954022989,
+            "f1": 0.8682530470110272,
+            "fpr": 0.009895547003848268,
+            "fpr_wilson_95": [
+              0.006268533074957599,
+              0.015588254649450402
+            ],
+            "confusion_matrix": [
+              [
+                1801,
+                18
+              ],
+              [
+                209,
+                748
+              ]
+            ],
+            "support": {
+              "normal": 1819,
+              "ai_style": 957
+            },
+            "predicted_positive": 766,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "degenerate_no_detections": false,
+          "caution": "验证集经验 FPR 上限不是总体误判率保证；小样本必须结合区间与人工复核。"
+        },
+        "0.02": {
+          "threshold": 0.8929862021517575,
+          "max_validation_fpr": 0.02,
+          "selection_rule": "maximize recall under empirical FPR cap, then precision/F1, then larger threshold; score >= threshold",
+          "metrics": {
+            "precision": 0.96,
+            "recall": 0.877742946708464,
+            "f1": 0.9170305676855894,
+            "fpr": 0.019241341396371632,
+            "fpr_wilson_95": [
+              0.013867358496181412,
+              0.026641627331070186
+            ],
+            "confusion_matrix": [
+              [
+                1784,
+                35
+              ],
+              [
+                117,
+                840
+              ]
+            ],
+            "support": {
+              "normal": 1819,
+              "ai_style": 957
+            },
+            "predicted_positive": 875,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "degenerate_no_detections": false,
+          "caution": "验证集经验 FPR 上限不是总体误判率保证；小样本必须结合区间与人工复核。"
+        }
+      }
+    },
+    "selected_original": {
+      "path": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\models-text-specialist-20261114-v6\\text\\model.bin",
+      "sha256": "b525b63bed82f51dd385cbba65e4523a95644ff98187651ac382f880fc20aa1f",
+      "working_points": {
+        "0.01": {
+          "threshold": 0.9880491732327378,
+          "max_validation_fpr": 0.01,
+          "selection_rule": "maximize recall under empirical FPR cap, then precision/F1, then larger threshold; score >= threshold",
+          "metrics": {
+            "precision": 0.9777777777777777,
+            "recall": 0.8275862068965517,
+            "f1": 0.8964346349745331,
+            "fpr": 0.009895547003848268,
+            "fpr_wilson_95": [
+              0.006268533074957599,
+              0.015588254649450402
+            ],
+            "confusion_matrix": [
+              [
+                1801,
+                18
+              ],
+              [
+                165,
+                792
+              ]
+            ],
+            "support": {
+              "normal": 1819,
+              "ai_style": 957
+            },
+            "predicted_positive": 810,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "degenerate_no_detections": false,
+          "caution": "验证集经验 FPR 上限不是总体误判率保证；小样本必须结合区间与人工复核。"
+        },
+        "0.02": {
+          "threshold": 0.9255377981979195,
+          "max_validation_fpr": 0.02,
+          "selection_rule": "maximize recall under empirical FPR cap, then precision/F1, then larger threshold; score >= threshold",
+          "metrics": {
+            "precision": 0.9613196814562003,
+            "recall": 0.8829676071055381,
+            "f1": 0.9204793028322439,
+            "fpr": 0.018691588785046728,
+            "fpr_wilson_95": [
+              0.013406435963490636,
+              0.02600536174006428
+            ],
+            "confusion_matrix": [
+              [
+                1785,
+                34
+              ],
+              [
+                112,
+                845
+              ]
+            ],
+            "support": {
+              "normal": 1819,
+              "ai_style": 957
+            },
+            "predicted_positive": 879,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "degenerate_no_detections": false,
+          "caution": "验证集经验 FPR 上限不是总体误判率保证；小样本必须结合区间与人工复核。"
+        }
+      }
+    },
+    "selected_quantized": {
+      "path": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\models-text-specialist-20261114-v6\\text\\model.ftz",
+      "sha256": "9c17cdf74ea541a0c6d89c6c4160e2d233e59d74afeddd6f404d98872f891578",
+      "working_points": {
+        "0.01": {
+          "threshold": 0.9969344491243792,
+          "max_validation_fpr": 0.01,
+          "selection_rule": "maximize recall under empirical FPR cap, then precision/F1, then larger threshold; score >= threshold",
+          "metrics": {
+            "precision": 0.9772727272727273,
+            "recall": 0.8087774294670846,
+            "f1": 0.8850771869639794,
+            "fpr": 0.009895547003848268,
+            "fpr_wilson_95": [
+              0.006268533074957599,
+              0.015588254649450402
+            ],
+            "confusion_matrix": [
+              [
+                1801,
+                18
+              ],
+              [
+                183,
+                774
+              ]
+            ],
+            "support": {
+              "normal": 1819,
+              "ai_style": 957
+            },
+            "predicted_positive": 792,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "degenerate_no_detections": false,
+          "caution": "验证集经验 FPR 上限不是总体误判率保证；小样本必须结合区间与人工复核。"
+        },
+        "0.02": {
+          "threshold": 0.9709094827272855,
+          "max_validation_fpr": 0.02,
+          "selection_rule": "maximize recall under empirical FPR cap, then precision/F1, then larger threshold; score >= threshold",
+          "metrics": {
+            "precision": 0.959954233409611,
+            "recall": 0.8766980146290491,
+            "f1": 0.9164391043145821,
+            "fpr": 0.019241341396371632,
+            "fpr_wilson_95": [
+              0.013867358496181412,
+              0.026641627331070186
+            ],
+            "confusion_matrix": [
+              [
+                1784,
+                35
+              ],
+              [
+                118,
+                839
+              ]
+            ],
+            "support": {
+              "normal": 1819,
+              "ai_style": 957
+            },
+            "predicted_positive": 874,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "degenerate_no_detections": false,
+          "caution": "验证集经验 FPR 上限不是总体误判率保证；小样本必须结合区间与人工复核。"
+        }
+      }
+    }
+  },
+  "trials": [
+    {
+      "name": "baseline",
+      "path": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\models-text-specialist-20261114-v6\\candidates\\baseline.bin",
+      "metadata": {
+        "schema": 1,
+        "mode": "text",
+        "format": "original",
+        "model_sha256": "09b1743de787c865fd558432ac64d585f4e980d02612cc6a94e74f6ab2375685",
+        "model_bytes": 5431666,
+        "params": {
+          "dim": 32,
+          "bucket": 20000,
+          "epoch": 30,
+          "lr": 0.5,
+          "wordNgrams": 2,
+          "minn": 2,
+          "maxn": 4,
+          "minCount": 1,
+          "loss": "softmax",
+          "thread": 1,
+          "seed": 42,
+          "verbose": 0
+        },
+        "threshold": 0.9847227542735736,
+        "threshold_source": "validation",
+        "selection_splits": [
+          "train",
+          "validation"
+        ],
+        "validation": {
+          "threshold": 0.9847227542735736,
+          "max_validation_fpr": 0.01,
+          "selection_rule": "maximize recall under empirical FPR cap, then precision/F1, then larger threshold; score >= threshold",
+          "metrics": {
+            "precision": 0.9765013054830287,
+            "recall": 0.7816091954022989,
+            "f1": 0.8682530470110272,
+            "fpr": 0.009895547003848268,
+            "fpr_wilson_95": [
+              0.006268533074957599,
+              0.015588254649450402
+            ],
+            "confusion_matrix": [
+              [
+                1801,
+                18
+              ],
+              [
+                209,
+                748
+              ]
+            ],
+            "support": {
+              "normal": 1819,
+              "ai_style": 957
+            },
+            "predicted_positive": 766,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "degenerate_no_detections": false,
+          "caution": "验证集经验 FPR 上限不是总体误判率保证；小样本必须结合区间与人工复核。"
+        },
+        "dictionary_sha256": "7197c3211ddd98962b036cdf40324d1ea2bfaa12bd028e68faa70111a88e12a8",
+        "preprocess_sha256": "499cdc522aaeca863bab6be99f4f213925e5312c8a0299316e0b56fc74178bf8",
+        "dataset": {
+          "comments_sha256": "3376b9df6ba0d118e2cb184226233639f7c127344af7afca740233c47c925d43",
+          "splits_sha256": "5fe4549b332aa0dee5cb33ccd33104f7fcaf56d2cfaf5970cff4257b46b614d8",
+          "files": {
+            "test.csv": "d78280ff60d0fe61636179b8361e88a3e58a6f65834ff1294c7961dc40fcd8d7",
+            "train.csv": "1b4057c6b06d09f9df1879dc6e51d655e39c1e2885e2e7ae34b7e2c7c4614936",
+            "validation.csv": "9829ba137e8ea3d955a24c0608c86bb10f800328cc214beeaf603aa9b1445e34",
+            "text/test.txt": "edaf2b7edec88f5b4dd686e66ea4ac1db7f7e0ae63c7841283f9115163d9b615",
+            "text/train.txt": "e61f3352081869a1b6231573f1ed6477ddbf617cc3a5fc89759fb936ff01d074",
+            "text/validation.txt": "1cf1d9027fd3bae22d69447a84ec53171a598d4b8935b1b3298902b17c6f7f46",
+            "weighted-text/train-weight1.txt": "282fcb1cd9cf7dd3566def38542ef4601d14a23718983ae1108d620a31b5e2e2",
+            "weighted-text/train-weight3.txt": "22e41860a4573b0c2eb71e07451cb64a2bf094ec1fcc2801e7a61a4ddd0e91f0"
+          }
+        },
+        "versions": {
+          "fasttext-wheel": "0.9.2",
+          "jieba": "0.42.1",
+          "numpy": "1.26.4"
+        },
+        "warning": "AI 风格评分不是已校准的真实 AI 概率；UID 不进入特征。",
+        "training_ordinary_ai_weight": 1,
+        "training_input": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\data-text-specialist-20261114-v6\\processed\\weighted-text\\train-weight1.txt",
+        "training_input_sha256": "282fcb1cd9cf7dd3566def38542ef4601d14a23718983ae1108d620a31b5e2e2",
+        "validation_groups": {
+          "all": {
+            "precision": 0.9765013054830287,
+            "recall": 0.7816091954022989,
+            "f1": 0.8682530470110272,
+            "fpr": 0.009895547003848268,
+            "fpr_wilson_95": [
+              0.006268533074957599,
+              0.015588254649450402
+            ],
+            "confusion_matrix": [
+              [
+                1801,
+                18
+              ],
+              [
+                209,
+                748
+              ]
+            ],
+            "support": {
+              "normal": 1819,
+              "ai_style": 957
+            },
+            "predicted_positive": 766,
+            "abstentions": 0,
+            "coverage": 1.0,
+            "rows": 2776
+          },
+          "ordinary": {
+            "precision": 0.8172043010752689,
+            "recall": 0.672566371681416,
+            "f1": 0.7378640776699029,
+            "fpr": 0.00947603121516165,
+            "fpr_wilson_95": [
+              0.005924772347443104,
+              0.015123501200279218
+            ],
+            "confusion_matrix": [
+              [
+                1777,
+                17
+              ],
+              [
+                37,
+                76
+              ]
+            ],
+            "support": {
+              "normal": 1794,
+              "ai_style": 113
+            },
+            "predicted_positive": 93,
+            "abstentions": 0,
+            "coverage": 1.0,
+            "rows": 1907
+          },
+          "ordinary_length_1-20": {
+            "precision": 0.375,
+            "recall": 0.75,
+            "f1": 0.5,
+            "fpr": 0.016181229773462782,
+            "fpr_wilson_95": [
+              0.008812635600901796,
+              0.02952745652790033
+            ],
+            "confusion_matrix": [
+              [
+                608,
+                10
+              ],
+              [
+                2,
+                6
+              ]
+            ],
+            "support": {
+              "normal": 618,
+              "ai_style": 8
+            },
+            "predicted_positive": 16,
+            "abstentions": 0,
+            "coverage": 1.0,
+            "rows": 626
+          },
+          "ordinary_length_21-60": {
+            "precision": 0.8108108108108109,
+            "recall": 0.5454545454545454,
+            "f1": 0.6521739130434782,
+            "fpr": 0.007865168539325843,
+            "fpr_wilson_95": [
+              0.0038150167020321287,
+              0.016145412124164385
+            ],
+            "confusion_matrix": [
+              [
+                883,
+                7
+              ],
+              [
+                25,
+                30
+              ]
+            ],
+            "support": {
+              "normal": 890,
+              "ai_style": 55
+            },
+            "predicted_positive": 37,
+            "abstentions": 0,
+            "coverage": 1.0,
+            "rows": 945
+          },
+          "ordinary_length_61+": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.888888888888889,
+            "fpr": 0.0,
+            "fpr_wilson_95": [
+              0.0,
+              0.01325365541673796
+            ],
+            "confusion_matrix": [
+              [
+                286,
+                0
+              ],
+              [
+                10,
+                40
+              ]
+            ],
+            "support": {
+              "normal": 286,
+              "ai_style": 50
+            },
+            "predicted_positive": 40,
+            "abstentions": 0,
+            "coverage": 1.0,
+            "rows": 336
+          }
+        },
+        "training_seconds": 11.195070300000225
+      }
+    },
+    {
+      "name": "ordinary3",
+      "path": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\models-text-specialist-20261114-v6\\candidates\\ordinary3.bin",
+      "metadata": {
+        "schema": 1,
+        "mode": "text",
+        "format": "original",
+        "model_sha256": "5324e2c6a4fc73efff6527ded087cee0be0bd5449933aae8a876c6f241b6ab41",
+        "model_bytes": 5431666,
+        "params": {
+          "dim": 32,
+          "bucket": 20000,
+          "epoch": 30,
+          "lr": 0.5,
+          "wordNgrams": 2,
+          "minn": 2,
+          "maxn": 4,
+          "minCount": 1,
+          "loss": "softmax",
+          "thread": 1,
+          "seed": 42,
+          "verbose": 0
+        },
+        "threshold": 0.976373202900517,
+        "threshold_source": "validation",
+        "selection_splits": [
+          "train",
+          "validation"
+        ],
+        "validation": {
+          "threshold": 0.976373202900517,
+          "max_validation_fpr": 0.01,
+          "selection_rule": "maximize recall under empirical FPR cap, then precision/F1, then larger threshold; score >= threshold",
+          "metrics": {
+            "precision": 0.9776119402985075,
+            "recall": 0.8213166144200627,
+            "f1": 0.8926746166950595,
+            "fpr": 0.009895547003848268,
+            "fpr_wilson_95": [
+              0.006268533074957599,
+              0.015588254649450402
+            ],
+            "confusion_matrix": [
+              [
+                1801,
+                18
+              ],
+              [
+                171,
+                786
+              ]
+            ],
+            "support": {
+              "normal": 1819,
+              "ai_style": 957
+            },
+            "predicted_positive": 804,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "degenerate_no_detections": false,
+          "caution": "验证集经验 FPR 上限不是总体误判率保证；小样本必须结合区间与人工复核。"
+        },
+        "dictionary_sha256": "7197c3211ddd98962b036cdf40324d1ea2bfaa12bd028e68faa70111a88e12a8",
+        "preprocess_sha256": "499cdc522aaeca863bab6be99f4f213925e5312c8a0299316e0b56fc74178bf8",
+        "dataset": {
+          "comments_sha256": "3376b9df6ba0d118e2cb184226233639f7c127344af7afca740233c47c925d43",
+          "splits_sha256": "5fe4549b332aa0dee5cb33ccd33104f7fcaf56d2cfaf5970cff4257b46b614d8",
+          "files": {
+            "test.csv": "d78280ff60d0fe61636179b8361e88a3e58a6f65834ff1294c7961dc40fcd8d7",
+            "train.csv": "1b4057c6b06d09f9df1879dc6e51d655e39c1e2885e2e7ae34b7e2c7c4614936",
+            "validation.csv": "9829ba137e8ea3d955a24c0608c86bb10f800328cc214beeaf603aa9b1445e34",
+            "text/test.txt": "edaf2b7edec88f5b4dd686e66ea4ac1db7f7e0ae63c7841283f9115163d9b615",
+            "text/train.txt": "e61f3352081869a1b6231573f1ed6477ddbf617cc3a5fc89759fb936ff01d074",
+            "text/validation.txt": "1cf1d9027fd3bae22d69447a84ec53171a598d4b8935b1b3298902b17c6f7f46",
+            "weighted-text/train-weight1.txt": "282fcb1cd9cf7dd3566def38542ef4601d14a23718983ae1108d620a31b5e2e2",
+            "weighted-text/train-weight3.txt": "22e41860a4573b0c2eb71e07451cb64a2bf094ec1fcc2801e7a61a4ddd0e91f0"
+          }
+        },
+        "versions": {
+          "fasttext-wheel": "0.9.2",
+          "jieba": "0.42.1",
+          "numpy": "1.26.4"
+        },
+        "warning": "AI 风格评分不是已校准的真实 AI 概率；UID 不进入特征。",
+        "training_ordinary_ai_weight": 3,
+        "training_input": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\data-text-specialist-20261114-v6\\processed\\weighted-text\\train-weight3.txt",
+        "training_input_sha256": "22e41860a4573b0c2eb71e07451cb64a2bf094ec1fcc2801e7a61a4ddd0e91f0",
+        "validation_groups": {
+          "all": {
+            "precision": 0.9776119402985075,
+            "recall": 0.8213166144200627,
+            "f1": 0.8926746166950595,
+            "fpr": 0.009895547003848268,
+            "fpr_wilson_95": [
+              0.006268533074957599,
+              0.015588254649450402
+            ],
+            "confusion_matrix": [
+              [
+                1801,
+                18
+              ],
+              [
+                171,
+                786
+              ]
+            ],
+            "support": {
+              "normal": 1819,
+              "ai_style": 957
+            },
+            "predicted_positive": 804,
+            "abstentions": 0,
+            "coverage": 1.0,
+            "rows": 2776
+          },
+          "ordinary": {
+            "precision": 0.8350515463917526,
+            "recall": 0.7168141592920354,
+            "f1": 0.7714285714285714,
+            "fpr": 0.008918617614269788,
+            "fpr_wilson_95": [
+              0.005497172573278049,
+              0.014438655830748503
+            ],
+            "confusion_matrix": [
+              [
+                1778,
+                16
+              ],
+              [
+                32,
+                81
+              ]
+            ],
+            "support": {
+              "normal": 1794,
+              "ai_style": 113
+            },
+            "predicted_positive": 97,
+            "abstentions": 0,
+            "coverage": 1.0,
+            "rows": 1907
+          },
+          "ordinary_length_1-20": {
+            "precision": 0.3888888888888889,
+            "recall": 0.875,
+            "f1": 0.5384615384615385,
+            "fpr": 0.01779935275080906,
+            "fpr_wilson_95": [
+              0.009967406673672637,
+              0.031588939327608416
+            ],
+            "confusion_matrix": [
+              [
+                607,
+                11
+              ],
+              [
+                1,
+                7
+              ]
+            ],
+            "support": {
+              "normal": 618,
+              "ai_style": 8
+            },
+            "predicted_positive": 18,
+            "abstentions": 0,
+            "coverage": 1.0,
+            "rows": 626
+          },
+          "ordinary_length_21-60": {
+            "precision": 0.8648648648648649,
+            "recall": 0.5818181818181818,
+            "f1": 0.6956521739130435,
+            "fpr": 0.0056179775280898875,
+            "fpr_wilson_95": [
+              0.002401980603150427,
+              0.013083381688005885
+            ],
+            "confusion_matrix": [
+              [
+                885,
+                5
+              ],
+              [
+                23,
+                32
+              ]
+            ],
+            "support": {
+              "normal": 890,
+              "ai_style": 55
+            },
+            "predicted_positive": 37,
+            "abstentions": 0,
+            "coverage": 1.0,
+            "rows": 945
+          },
+          "ordinary_length_61+": {
+            "precision": 1.0,
+            "recall": 0.84,
+            "f1": 0.9130434782608696,
+            "fpr": 0.0,
+            "fpr_wilson_95": [
+              0.0,
+              0.01325365541673796
+            ],
+            "confusion_matrix": [
+              [
+                286,
+                0
+              ],
+              [
+                8,
+                42
+              ]
+            ],
+            "support": {
+              "normal": 286,
+              "ai_style": 50
+            },
+            "predicted_positive": 42,
+            "abstentions": 0,
+            "coverage": 1.0,
+            "rows": 336
+          }
+        },
+        "training_seconds": 11.392394300000888
+      }
+    },
+    {
+      "name": "ordinary3_dim16",
+      "path": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\models-text-specialist-20261114-v6\\candidates\\ordinary3_dim16.bin",
+      "metadata": {
+        "schema": 1,
+        "mode": "text",
+        "format": "original",
+        "model_sha256": "b525b63bed82f51dd385cbba65e4523a95644ff98187651ac382f880fc20aa1f",
+        "model_bytes": 2910962,
+        "params": {
+          "dim": 16,
+          "bucket": 20000,
+          "epoch": 50,
+          "lr": 0.5,
+          "wordNgrams": 2,
+          "minn": 2,
+          "maxn": 4,
+          "minCount": 1,
+          "loss": "softmax",
+          "thread": 1,
+          "seed": 42,
+          "verbose": 0
+        },
+        "threshold": 0.9880491732327378,
+        "threshold_source": "validation",
+        "selection_splits": [
+          "train",
+          "validation"
+        ],
+        "validation": {
+          "threshold": 0.9880491732327378,
+          "max_validation_fpr": 0.01,
+          "selection_rule": "maximize recall under empirical FPR cap, then precision/F1, then larger threshold; score >= threshold",
+          "metrics": {
+            "precision": 0.9777777777777777,
+            "recall": 0.8275862068965517,
+            "f1": 0.8964346349745331,
+            "fpr": 0.009895547003848268,
+            "fpr_wilson_95": [
+              0.006268533074957599,
+              0.015588254649450402
+            ],
+            "confusion_matrix": [
+              [
+                1801,
+                18
+              ],
+              [
+                165,
+                792
+              ]
+            ],
+            "support": {
+              "normal": 1819,
+              "ai_style": 957
+            },
+            "predicted_positive": 810,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "degenerate_no_detections": false,
+          "caution": "验证集经验 FPR 上限不是总体误判率保证；小样本必须结合区间与人工复核。"
+        },
+        "dictionary_sha256": "7197c3211ddd98962b036cdf40324d1ea2bfaa12bd028e68faa70111a88e12a8",
+        "preprocess_sha256": "499cdc522aaeca863bab6be99f4f213925e5312c8a0299316e0b56fc74178bf8",
+        "dataset": {
+          "comments_sha256": "3376b9df6ba0d118e2cb184226233639f7c127344af7afca740233c47c925d43",
+          "splits_sha256": "5fe4549b332aa0dee5cb33ccd33104f7fcaf56d2cfaf5970cff4257b46b614d8",
+          "files": {
+            "test.csv": "d78280ff60d0fe61636179b8361e88a3e58a6f65834ff1294c7961dc40fcd8d7",
+            "train.csv": "1b4057c6b06d09f9df1879dc6e51d655e39c1e2885e2e7ae34b7e2c7c4614936",
+            "validation.csv": "9829ba137e8ea3d955a24c0608c86bb10f800328cc214beeaf603aa9b1445e34",
+            "text/test.txt": "edaf2b7edec88f5b4dd686e66ea4ac1db7f7e0ae63c7841283f9115163d9b615",
+            "text/train.txt": "e61f3352081869a1b6231573f1ed6477ddbf617cc3a5fc89759fb936ff01d074",
+            "text/validation.txt": "1cf1d9027fd3bae22d69447a84ec53171a598d4b8935b1b3298902b17c6f7f46",
+            "weighted-text/train-weight1.txt": "282fcb1cd9cf7dd3566def38542ef4601d14a23718983ae1108d620a31b5e2e2",
+            "weighted-text/train-weight3.txt": "22e41860a4573b0c2eb71e07451cb64a2bf094ec1fcc2801e7a61a4ddd0e91f0"
+          }
+        },
+        "versions": {
+          "fasttext-wheel": "0.9.2",
+          "jieba": "0.42.1",
+          "numpy": "1.26.4"
+        },
+        "warning": "AI 风格评分不是已校准的真实 AI 概率；UID 不进入特征。",
+        "training_ordinary_ai_weight": 3,
+        "training_input": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\data-text-specialist-20261114-v6\\processed\\weighted-text\\train-weight3.txt",
+        "training_input_sha256": "22e41860a4573b0c2eb71e07451cb64a2bf094ec1fcc2801e7a61a4ddd0e91f0",
+        "validation_groups": {
+          "all": {
+            "precision": 0.9777777777777777,
+            "recall": 0.8275862068965517,
+            "f1": 0.8964346349745331,
+            "fpr": 0.009895547003848268,
+            "fpr_wilson_95": [
+              0.006268533074957599,
+              0.015588254649450402
+            ],
+            "confusion_matrix": [
+              [
+                1801,
+                18
+              ],
+              [
+                165,
+                792
+              ]
+            ],
+            "support": {
+              "normal": 1819,
+              "ai_style": 957
+            },
+            "predicted_positive": 810,
+            "abstentions": 0,
+            "coverage": 1.0,
+            "rows": 2776
+          },
+          "ordinary": {
+            "precision": 0.84,
+            "recall": 0.7433628318584071,
+            "f1": 0.7887323943661971,
+            "fpr": 0.008918617614269788,
+            "fpr_wilson_95": [
+              0.005497172573278049,
+              0.014438655830748503
+            ],
+            "confusion_matrix": [
+              [
+                1778,
+                16
+              ],
+              [
+                29,
+                84
+              ]
+            ],
+            "support": {
+              "normal": 1794,
+              "ai_style": 113
+            },
+            "predicted_positive": 100,
+            "abstentions": 0,
+            "coverage": 1.0,
+            "rows": 1907
+          },
+          "ordinary_length_1-20": {
+            "precision": 0.4117647058823529,
+            "recall": 0.875,
+            "f1": 0.56,
+            "fpr": 0.016181229773462782,
+            "fpr_wilson_95": [
+              0.008812635600901796,
+              0.02952745652790033
+            ],
+            "confusion_matrix": [
+              [
+                608,
+                10
+              ],
+              [
+                1,
+                7
+              ]
+            ],
+            "support": {
+              "normal": 618,
+              "ai_style": 8
+            },
+            "predicted_positive": 17,
+            "abstentions": 0,
+            "coverage": 1.0,
+            "rows": 626
+          },
+          "ordinary_length_21-60": {
+            "precision": 0.8536585365853658,
+            "recall": 0.6363636363636364,
+            "f1": 0.7291666666666666,
+            "fpr": 0.006741573033707865,
+            "fpr_wilson_95": [
+              0.0030932786650589806,
+              0.014629616893617432
+            ],
+            "confusion_matrix": [
+              [
+                884,
+                6
+              ],
+              [
+                20,
+                35
+              ]
+            ],
+            "support": {
+              "normal": 890,
+              "ai_style": 55
+            },
+            "predicted_positive": 41,
+            "abstentions": 0,
+            "coverage": 1.0,
+            "rows": 945
+          },
+          "ordinary_length_61+": {
+            "precision": 1.0,
+            "recall": 0.84,
+            "f1": 0.9130434782608696,
+            "fpr": 0.0,
+            "fpr_wilson_95": [
+              0.0,
+              0.01325365541673796
+            ],
+            "confusion_matrix": [
+              [
+                286,
+                0
+              ],
+              [
+                8,
+                42
+              ]
+            ],
+            "support": {
+              "normal": 286,
+              "ai_style": 50
+            },
+            "predicted_positive": 42,
+            "abstentions": 0,
+            "coverage": 1.0,
+            "rows": 336
+          }
+        },
+        "training_seconds": 10.307586400000218
+      }
+    }
+  ]
+}

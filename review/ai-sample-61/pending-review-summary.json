@@ -1,0 +1,16 @@
+{
+  "sample_size": 61,
+  "ai": 0,
+  "human": 0,
+  "uncertain": 0,
+  "pending": 61,
+  "unresolved": 61,
+  "review_complete": false,
+  "reviewed_false_discovery_fraction": null,
+  "confirmed_human_fraction_of_sample": 0.0,
+  "sample_error_bounds_with_unresolved": [
+    0.0,
+    1.0
+  ],
+  "metric_note": "AI集抽样中确认真人的比例；不是以所有真人为分母的真人误拦率。无法判断与未填均单列，不计为确认AI。"
+}

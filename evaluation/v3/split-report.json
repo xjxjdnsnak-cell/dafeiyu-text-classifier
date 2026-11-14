@@ -1,0 +1,218 @@
+{
+  "source_sha256": {
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\data-rule-ge30-20261114\\comments.csv": "773094d31ac7a8828e96b435e587fd8a7500afa47cfbb5d7436ecf44d7433f7b",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\data-rule-ge30-20261114\\label-decisions.jsonl": "26b9b747710947246f0f6a0e4ababf33a9ad3233354221eeb6d121fb98bb24b1",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\data-rule-ge30-20261114\\ai.jsonl": "a3150618d8e1a142e44f48610670511c1ff91e5cc810df9471a17710e327c3ad",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\out\\rule-ge30-review-20261114\\sampling.json": "fba06f60c72ca8ea9b9be955085ad1464cf7aa63553ca1b94d727a0b58240ef6",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\out\\rule-ge30-review-20261114\\sample.jsonl": "5e597e39585ec22e7d40c7439e093c314a9a639399bdf883d5d294e8d264fe7d",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\reports-text-fusion-20261113-r3\\protocol.json": "2ffbde21c557d5d69b11a8c4c41729719de27c4d172fc7672008edb62fbfa954",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\experiments\\text-specialist-20261113\\human_exclusion_policy.json": "685b84cb77670f8a8e7ad00b8341265a5f045e8f0c1ea3f92ea61bc5c2f3c24f",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\experiments\\text-specialist-20261113\\known_bilibili_emotes.json": "a6b3e7b1f40a851b9b97abcb1291aa537510003697959948b2e7b18f3ff7b18f",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\src\\bili_ai\\assets\\preprocess.json": "499cdc522aaeca863bab6be99f4f213925e5312c8a0299316e0b56fc74178bf8",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\src\\bili_ai\\assets\\jieba.dict.txt": "7197c3211ddd98962b036cdf40324d1ea2bfaa12bd028e68faa70111a88e12a8",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\experiments\\text-training-20261114\\train_text.py": "57ba4c7002af40f28c3fcc58eb24f133a788e7320c2f85256cad421a96ff1a69",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\experiments\\text-training-20261114\\human_exclusion_policy.json": "c59c1e3448d1e68614e7f4b72ba71108547ccbe50d7b0d92d2177fbe5592639c",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\reports-text-specialist-20261114\\真人误拦复核.csv": "98bbc3cb8526e642a6635a14594cc5c907078c86ba059e3fe3b9b822e32dae85",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\reports-text-specialist-20261114-v2\\真人误拦复核.csv": "76c2086d1aa1e92a51a0b2c9c2d98137f1673c4a6309132f25df8f8eefc895c6",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\models-clean-dual-comparison\\text\\model.bin": "9b0dfcbfdfec88841d911c3fac5fc6114dfb17966be66137b49a4e33a85d0c6e",
+    "D:\\xwechat_files\\<wxid>\\msg\\file\\2026-11\\dafeiyu-comments-20261112-1719.zip": "e9ae74a2a6ad669e9eada14eb0873aa75a6e1cfa27e4089aacbb331936805fb7",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\data\\provenance.jsonl": "43515acac71f54c5af2f512d70a4786bae98a10a7c7e1d247af69f2ab9c74494",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\data\\import_report.json": "a3bdb30903ad8bc5ba5ffa4e6f10cf5659ea01f5a6d38b3bdae89f866b6a1db0",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\out\\comment-dataset-20261112\\export\\all_scored.jsonl": "48dadfca83d7a86843664e10d135e6c3bdad89cbe3c1dd527af4cbd59d67bb3c",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\out\\collector-expand-20261112\\export\\all_scored.jsonl": "bed29aeded4f4ab2a846afc986536c01fce709c56dc65fc535569660961bdf62",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\out\\collector-newtopics-20261112\\export\\all_scored.jsonl": "0f852840aa0189b1d9eac1094f4778876f5ba140a2b63fac0897287d128ac9bd",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\out\\text-specialist-20261113\\collection\\export\\all_scored.jsonl": "55d79fc208b040dea67cc00ec7e07d0e5b42f857bce5ae35dde82a0c34da856d"
+  },
+  "cleaning": {
+    "input_rows": 12840,
+    "empty_rows_removed": 0,
+    "duplicate_rows_removed": 1,
+    "conflicting_rows_removed": 4,
+    "clean_rows": 12835,
+    "unique_uids": 8381,
+    "labels": {
+      "0": 6812,
+      "1": 6023
+    }
+  },
+  "video_assignment": {
+    "video:117476180364106": "validation",
+    "video:117568052402123": "train",
+    "video:117483109488775": "test",
+    "video:117512603764487": "train",
+    "video:117581373507948": "train",
+    "video:117576675885073": "validation",
+    "video:117518626788897": "train",
+    "video:117507218215037": "train",
+    "video:117359830434626": "validation",
+    "video:117580719197188": "train",
+    "video:117591976774105": "test",
+    "video:117421956400989": "test",
+    "video:117598637266668": "test",
+    "video:117570317325951": "train",
+    "video:117540118338194": "validation",
+    "video:117444924415497": "train",
+    "video:114255022003231": "train",
+    "video:114251901441504": "test",
+    "video:114261061803923": "train",
+    "video:114250139829166": "train",
+    "video:117586960321424": "train",
+    "video:114255793752520": "train",
+    "video:114250592818005": "train",
+    "video:114252086051725": "train",
+    "video:114252102763594": "train",
+    "video:114252639635458": "train",
+    "video:114262286600552": "train",
+    "video:117596959545435": "train",
+    "video:117592094150834": "train",
+    "video:114256531955521": "train",
+    "video:117593000117972": "train",
+    "video:114249804287735": "train",
+    "video:114256699720923": "train",
+    "video:117573941204288": "train",
+    "video:117507738374227": "train",
+    "video:117506949977742": "train",
+    "video:117485189733372": "train",
+    "video:117420597578255": "train",
+    "video:117483059026829": "train",
+    "video:117553254897241": "train",
+    "video:117499500697271": "train",
+    "video:117581474240592": "train",
+    "video:117598536604611": "test",
+    "video:117496195583340": "test",
+    "video:117368302869198": "test"
+  },
+  "video_counts": {
+    "validation": 4,
+    "train": 33,
+    "test": 8
+  },
+  "partitions": {
+    "train": {
+      "rows": 8828,
+      "uids": 6198,
+      "labels": {
+        "0": 4859,
+        "1": 3969
+      },
+      "ordinary_labels": {
+        "0": 4763,
+        "1": 439
+      }
+    },
+    "validation": {
+      "rows": 1886,
+      "uids": 1053,
+      "labels": {
+        "1": 958,
+        "0": 928
+      },
+      "ordinary_labels": {
+        "1": 112,
+        "0": 919
+      }
+    },
+    "test": {
+      "rows": 1650,
+      "uids": 1074,
+      "labels": {
+        "0": 947,
+        "1": 703
+      },
+      "ordinary_labels": {
+        "0": 935,
+        "1": 105
+      }
+    }
+  },
+  "quarantine_rows": 452,
+  "quarantine_reasons": {
+    "template_cross_split": 34,
+    "uid_cross_split": 418,
+    "source_videos_cross_split": 1
+  },
+  "overlap": {
+    "train/validation": {
+      "uids": 0,
+      "videos": 0,
+      "templates": 0,
+      "model_visible_body": 0
+    },
+    "train/test": {
+      "uids": 0,
+      "videos": 0,
+      "templates": 0,
+      "model_visible_body": 0
+    },
+    "validation/test": {
+      "uids": 0,
+      "videos": 0,
+      "templates": 0,
+      "model_visible_body": 0
+    }
+  },
+  "user_reviewed_ai": 61,
+  "user_corrections": {
+    "relabelled_to_ai": 11,
+    "batches": [
+      {
+        "batch": 1,
+        "statement": "5 8 10 11 12 15都是ai",
+        "recorded_on": "2026-11-14",
+        "ai_items": [
+          5,
+          8,
+          10,
+          11,
+          12,
+          15
+        ],
+        "reviewed_rows": 15
+      },
+      {
+        "batch": 2,
+        "statement": "2 3 5 10 13都是ai",
+        "recorded_on": "2026-11-14",
+        "ai_items": [
+          2,
+          3,
+          5,
+          10,
+          13
+        ],
+        "reviewed_rows": 14
+      }
+    ],
+    "reviewed_false_blocks": 29,
+    "reviewed_videos": [
+      "video:117359830434626",
+      "video:117476180364106",
+      "video:117518626788897",
+      "video:117568052402123",
+      "video:117576675885073",
+      "video:117580719197188"
+    ],
+    "reviewed_videos_allowed_roles": [
+      "train",
+      "validation"
+    ],
+    "corrected_row_splits": {
+      "validation": 7,
+      "train": 4
+    }
+  },
+  "gray_excluded": {
+    "rows": 19,
+    "by_phrase": {
+      "不是xx而是xx": 19
+    },
+    "policy_version": "2026-11-14-user-gray-v2",
+    "action": "excluded from human samples; never promoted to AI"
+  },
+  "video_id_policy": "collector aid and phone replyType1 oid share canonical video:<aid>; all deduplicated origins unioned",
+  "source_integrity_repair": "all original UID/video origins merged for duplicate bodies; holdout redrawn because reviewed videos moved to development",
+  "video_recovered_from_early_import": 455,
+  "unknown_video_train_only": 0,
+  "near_duplicates": "prefix/suffix candidate + >=0.90 edit similarity heuristic, not semantic independence",
+  "prior_data_status": "previously collected/labeled archive, freshly split for this new training run"
+}
