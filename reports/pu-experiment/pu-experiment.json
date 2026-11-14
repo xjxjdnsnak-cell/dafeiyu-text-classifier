@@ -1,0 +1,722 @@
+{
+  "generated_at": "2026-11-14T08:16:38+00:00",
+  "design": {
+    "P": 4431,
+    "U": 7251,
+    "H_train": 1279,
+    "bags": 5,
+    "u_subset_per_bag": 1451,
+    "seeds": [
+      20261101,
+      20261102,
+      20261103,
+      20261104,
+      20261105
+    ],
+    "aggregate": "mean of 5 bag scores",
+    "h_excluded_from_training": true,
+    "working_points": "v8 validation set, frozen protocol rule (1% cap, 2% secondary)",
+    "benchmark_use": "none (historical reference only)",
+    "status": "diagnostic; not a release candidate; v8 untouched"
+  },
+  "partitions": {
+    "P": 4431,
+    "U": 7251,
+    "H": 1279,
+    "H_evidence": {
+      "account": 1279
+    },
+    "U_rule_score_bands": {
+      "0-9": 7186,
+      "10-19": 55,
+      "20-29": 10
+    }
+  },
+  "bag_meta": [
+    {
+      "schema": 1,
+      "mode": "text",
+      "format": "original",
+      "model_sha256": "da7722ecc67083484106351c3febe0433a4b2d31428e865b9d1ac00d1262c321",
+      "params": {
+        "dim": 32,
+        "bucket": 20000,
+        "epoch": 30,
+        "lr": 0.5,
+        "wordNgrams": 2,
+        "minn": 2,
+        "maxn": 4,
+        "minCount": 1,
+        "loss": "softmax",
+        "thread": 1,
+        "seed": 42,
+        "verbose": 0
+      },
+      "bag_seed": 20261101,
+      "bag_index": 1,
+      "rows": {
+        "P": 4431,
+        "U_subset": 1451,
+        "total": 5882
+      },
+      "training_input": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\pu-experiment-20261114\\models\\bag_1\\train.txt",
+      "training_input_sha256": "e3e6024e7dd4f61ca9572231fefd402fb1050287b08d8ec6876a72fbfc61b43b",
+      "parent_data": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\data-text-specialist-20261114-v8",
+      "role": "PU bag base model; diagnostic only"
+    },
+    {
+      "schema": 1,
+      "mode": "text",
+      "format": "original",
+      "model_sha256": "20534bc4b986a61b0626851449208d61c8515a0891dd4c2e0820baf113847648",
+      "params": {
+        "dim": 32,
+        "bucket": 20000,
+        "epoch": 30,
+        "lr": 0.5,
+        "wordNgrams": 2,
+        "minn": 2,
+        "maxn": 4,
+        "minCount": 1,
+        "loss": "softmax",
+        "thread": 1,
+        "seed": 42,
+        "verbose": 0
+      },
+      "bag_seed": 20261102,
+      "bag_index": 2,
+      "rows": {
+        "P": 4431,
+        "U_subset": 1451,
+        "total": 5882
+      },
+      "training_input": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\pu-experiment-20261114\\models\\bag_2\\train.txt",
+      "training_input_sha256": "cc6f734a14d98e0bb9e187db3e7795ab7b3125103b0fb7701bbb27ff7b09f73f",
+      "parent_data": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\data-text-specialist-20261114-v8",
+      "role": "PU bag base model; diagnostic only"
+    },
+    {
+      "schema": 1,
+      "mode": "text",
+      "format": "original",
+      "model_sha256": "09ad5609919e0e0c65461b3277141384b4a6d73fc86e26f65a94792934d97194",
+      "params": {
+        "dim": 32,
+        "bucket": 20000,
+        "epoch": 30,
+        "lr": 0.5,
+        "wordNgrams": 2,
+        "minn": 2,
+        "maxn": 4,
+        "minCount": 1,
+        "loss": "softmax",
+        "thread": 1,
+        "seed": 42,
+        "verbose": 0
+      },
+      "bag_seed": 20261103,
+      "bag_index": 3,
+      "rows": {
+        "P": 4431,
+        "U_subset": 1451,
+        "total": 5882
+      },
+      "training_input": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\pu-experiment-20261114\\models\\bag_3\\train.txt",
+      "training_input_sha256": "6bb4bde455758ee62691ea4a28fa8af6076394a9ee01d173dc76b9d11909a795",
+      "parent_data": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\data-text-specialist-20261114-v8",
+      "role": "PU bag base model; diagnostic only"
+    },
+    {
+      "schema": 1,
+      "mode": "text",
+      "format": "original",
+      "model_sha256": "1b9745a106af1368f7121119f37cb0f78559141549730dc5650bdeaca9eaef52",
+      "params": {
+        "dim": 32,
+        "bucket": 20000,
+        "epoch": 30,
+        "lr": 0.5,
+        "wordNgrams": 2,
+        "minn": 2,
+        "maxn": 4,
+        "minCount": 1,
+        "loss": "softmax",
+        "thread": 1,
+        "seed": 42,
+        "verbose": 0
+      },
+      "bag_seed": 20261104,
+      "bag_index": 4,
+      "rows": {
+        "P": 4431,
+        "U_subset": 1451,
+        "total": 5882
+      },
+      "training_input": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\pu-experiment-20261114\\models\\bag_4\\train.txt",
+      "training_input_sha256": "94feb4d47407d35a15f0f0dc67834127534e229add6343441b954e668b968db4",
+      "parent_data": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\data-text-specialist-20261114-v8",
+      "role": "PU bag base model; diagnostic only"
+    },
+    {
+      "schema": 1,
+      "mode": "text",
+      "format": "original",
+      "model_sha256": "b039c5e3838efc9a053ef6be6d9ab1e0e28f7f5f7c10127661f3522c9653cefc",
+      "params": {
+        "dim": 32,
+        "bucket": 20000,
+        "epoch": 30,
+        "lr": 0.5,
+        "wordNgrams": 2,
+        "minn": 2,
+        "maxn": 4,
+        "minCount": 1,
+        "loss": "softmax",
+        "thread": 1,
+        "seed": 42,
+        "verbose": 0
+      },
+      "bag_seed": 20261105,
+      "bag_index": 5,
+      "rows": {
+        "P": 4431,
+        "U_subset": 1451,
+        "total": 5882
+      },
+      "training_input": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\pu-experiment-20261114\\models\\bag_5\\train.txt",
+      "training_input_sha256": "e07575f394792e2b6b7cd58be68ae1f022fa6c141eb081d9e64b2e29f9f61c04",
+      "parent_data": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\data-text-specialist-20261114-v8",
+      "role": "PU bag base model; diagnostic only"
+    }
+  ],
+  "results": {
+    "A_v8_frozen": {
+      "1pct": {
+        "threshold": 0.9700783414714084,
+        "all": {
+          "precision": 0.9775,
+          "recall": 0.818848167539267,
+          "f1": 0.8911680911680913,
+          "fpr": 0.009950248756218905,
+          "fpr_wilson_95": [
+            0.006303234389294134,
+            0.015674119795120945
+          ],
+          "confusion_matrix": [
+            [
+              1791,
+              18
+            ],
+            [
+              173,
+              782
+            ]
+          ],
+          "support": {
+            "normal": 1809,
+            "ai_style": 955
+          },
+          "predicted_positive": 800,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "ordinary_ai_recall": {
+          "recall": 0.7321428571428571,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              30,
+              82
+            ]
+          ],
+          "rows": 112
+        },
+        "length_groups": {
+          "1-20": {
+            "ai_recall": 0.4852941176470588,
+            "ai_rows": 68,
+            "human_trigger": 0.016643550624133148,
+            "human_rows": 721
+          },
+          "21-60": {
+            "ai_recall": 0.7900990099009901,
+            "ai_rows": 505,
+            "human_trigger": 0.0071174377224199285,
+            "human_rows": 843
+          },
+          "61+": {
+            "ai_recall": 0.9162303664921466,
+            "ai_rows": 382,
+            "human_trigger": 0.0,
+            "human_rows": 245
+          }
+        },
+        "rule_negative_trigger": {
+          "u_rows": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.011510791366906475,
+            "fpr_wilson_95": [
+              0.007097623518041338,
+              0.018616533995266513
+            ],
+            "confusion_matrix": [
+              [
+                1374,
+                16
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 1390,
+              "ai_style": 0
+            },
+            "predicted_positive": 16,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "h_account": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.00477326968973747,
+            "fpr_wilson_95": [
+              0.001309980181818833,
+              0.01723469810626572
+            ],
+            "confusion_matrix": [
+              [
+                417,
+                2
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 419,
+              "ai_style": 0
+            },
+            "predicted_positive": 2,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "h_comment": null,
+          "h_account_rows": 419,
+          "h_comment_rows": 0,
+          "u_rows_count": 1390
+        }
+      },
+      "2pct": {
+        "threshold": 0.81666116626185,
+        "all": {
+          "precision": 0.9618834080717489,
+          "recall": 0.8984293193717278,
+          "f1": 0.9290741743367624,
+          "fpr": 0.018794914317302378,
+          "fpr_wilson_95": [
+            0.013480712728903312,
+            0.02614848841890642
+          ],
+          "confusion_matrix": [
+            [
+              1775,
+              34
+            ],
+            [
+              97,
+              858
+            ]
+          ],
+          "support": {
+            "normal": 1809,
+            "ai_style": 955
+          },
+          "predicted_positive": 892,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "ordinary_ai_recall": {
+          "recall": 0.8303571428571429,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              19,
+              93
+            ]
+          ],
+          "rows": 112
+        },
+        "length_groups": {
+          "1-20": {
+            "ai_recall": 0.6323529411764706,
+            "ai_rows": 68,
+            "human_trigger": 0.024965325936199722,
+            "human_rows": 721
+          },
+          "21-60": {
+            "ai_recall": 0.8891089108910891,
+            "ai_rows": 505,
+            "human_trigger": 0.017793594306049824,
+            "human_rows": 843
+          },
+          "61+": {
+            "ai_recall": 0.9581151832460733,
+            "ai_rows": 382,
+            "human_trigger": 0.004081632653061225,
+            "human_rows": 245
+          }
+        },
+        "rule_negative_trigger": {
+          "u_rows": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.01870503597122302,
+            "fpr_wilson_95": [
+              0.012796391960360573,
+              0.0272665997574641
+            ],
+            "confusion_matrix": [
+              [
+                1364,
+                26
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 1390,
+              "ai_style": 0
+            },
+            "predicted_positive": 26,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "h_account": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.01909307875894988,
+            "fpr_wilson_95": [
+              0.009705812400087402,
+              0.03721829687725736
+            ],
+            "confusion_matrix": [
+              [
+                411,
+                8
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 419,
+              "ai_style": 0
+            },
+            "predicted_positive": 8,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "h_comment": null,
+          "h_account_rows": 419,
+          "h_comment_rows": 0,
+          "u_rows_count": 1390
+        }
+      },
+      "thresholds": {
+        "fpr_1pct": 0.9700783414714084,
+        "fpr_2pct": 0.81666116626185
+      },
+      "threshold_source": "v8 validation selection (frozen artifact)"
+    },
+    "B_pu_bagging": {
+      "1pct": {
+        "threshold": 0.9972092507370393,
+        "all": {
+          "precision": 0.9777195281782438,
+          "recall": 0.7811518324607329,
+          "f1": 0.8684516880093132,
+          "fpr": 0.009397457158651189,
+          "fpr_wilson_95": [
+            0.0058755778341933575,
+            0.014998535915009558
+          ],
+          "confusion_matrix": [
+            [
+              1792,
+              17
+            ],
+            [
+              209,
+              746
+            ]
+          ],
+          "support": {
+            "normal": 1809,
+            "ai_style": 955
+          },
+          "predicted_positive": 763,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "ordinary_ai_recall": {
+          "recall": 0.6875,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              35,
+              77
+            ]
+          ],
+          "rows": 112
+        },
+        "length_groups": {
+          "1-20": {
+            "ai_recall": 0.4852941176470588,
+            "ai_rows": 68,
+            "human_trigger": 0.020804438280166437,
+            "human_rows": 721
+          },
+          "21-60": {
+            "ai_recall": 0.7544554455445545,
+            "ai_rows": 505,
+            "human_trigger": 0.002372479240806643,
+            "human_rows": 843
+          },
+          "61+": {
+            "ai_recall": 0.8691099476439791,
+            "ai_rows": 382,
+            "human_trigger": 0.0,
+            "human_rows": 245
+          }
+        },
+        "rule_negative_trigger": {
+          "u_rows": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.010071942446043165,
+            "fpr_wilson_95": [
+              0.006009053576986624,
+              0.01683533709541786
+            ],
+            "confusion_matrix": [
+              [
+                1376,
+                14
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 1390,
+              "ai_style": 0
+            },
+            "predicted_positive": 14,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "h_account": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.007159904534606206,
+            "fpr_wilson_95": [
+              0.002437940957549841,
+              0.020836642495411416
+            ],
+            "confusion_matrix": [
+              [
+                416,
+                3
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 419,
+              "ai_style": 0
+            },
+            "predicted_positive": 3,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "h_comment": null,
+          "h_account_rows": 419,
+          "h_comment_rows": 0,
+          "u_rows_count": 1390
+        }
+      },
+      "2pct": {
+        "threshold": 0.9877200387641041,
+        "all": {
+          "precision": 0.9603729603729604,
+          "recall": 0.86282722513089,
+          "f1": 0.9089906232763376,
+          "fpr": 0.018794914317302378,
+          "fpr_wilson_95": [
+            0.013480712728903312,
+            0.02614848841890642
+          ],
+          "confusion_matrix": [
+            [
+              1775,
+              34
+            ],
+            [
+              131,
+              824
+            ]
+          ],
+          "support": {
+            "normal": 1809,
+            "ai_style": 955
+          },
+          "predicted_positive": 858,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "ordinary_ai_recall": {
+          "recall": 0.8125,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              21,
+              91
+            ]
+          ],
+          "rows": 112
+        },
+        "length_groups": {
+          "1-20": {
+            "ai_recall": 0.5,
+            "ai_rows": 68,
+            "human_trigger": 0.02912621359223301,
+            "human_rows": 721
+          },
+          "21-60": {
+            "ai_recall": 0.8495049504950495,
+            "ai_rows": 505,
+            "human_trigger": 0.014234875444839857,
+            "human_rows": 843
+          },
+          "61+": {
+            "ai_recall": 0.9450261780104712,
+            "ai_rows": 382,
+            "human_trigger": 0.004081632653061225,
+            "human_rows": 245
+          }
+        },
+        "rule_negative_trigger": {
+          "u_rows": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.017985611510791366,
+            "fpr_wilson_95": [
+              0.012211801645825117,
+              0.02641630665154787
+            ],
+            "confusion_matrix": [
+              [
+                1365,
+                25
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 1390,
+              "ai_style": 0
+            },
+            "predicted_positive": 25,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "h_account": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.021479713603818614,
+            "fpr_wilson_95": [
+              0.011340884048128155,
+              0.0403131303940933
+            ],
+            "confusion_matrix": [
+              [
+                410,
+                9
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 419,
+              "ai_style": 0
+            },
+            "predicted_positive": 9,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "h_comment": null,
+          "h_account_rows": 419,
+          "h_comment_rows": 0,
+          "u_rows_count": 1390
+        }
+      },
+      "thresholds": {
+        "fpr_1pct": 0.9972092507370393,
+        "fpr_2pct": 0.9877200387641041
+      },
+      "threshold_source": "selected on v8 validation with the frozen protocol rule"
+    }
+  },
+  "perf": {
+    "a_load_ms": 36.43210000154795,
+    "b_load_ms_5_models": 126.96719999803463,
+    "a_score_200_comments_ms": 3.2062000003255284,
+    "b_score_200_comments_ms_5_models": 32.08859999964867,
+    "encode_200_comments_ms": 11.45639999958803
+  },
+  "sizes": {
+    "a_model_bin_bytes": 5606915,
+    "b_ensemble_5x_bin_bytes": 21537299,
+    "dictionary_bytes": 5071852
+  },
+  "limits": [
+    "标签为规则分+人工裁决的弱标签；召回率指与机械规则标签的一致性，不是真实 AI 来源识别率",
+    "验证集真人证据样本规模有限，小样本触发率仅作参考",
+    "集成模型体积约为单模型 5 倍、加载与推理约 5 倍——移动端部署成本显著上升",
+    "单次实验、单划分；结果不用于调参或发布决策"
+  ]
+}

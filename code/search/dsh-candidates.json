@@ -1,0 +1,204 @@
+{
+  "candidates": [
+    {
+      "bvid": "BV1i24P6rEmt",
+      "title": "大家好，这里是 DeepSeek Harness，正式入驻 B 站！",
+      "review": 41723,
+      "play": 5434057,
+      "author": "DeepSeekHarness",
+      "pubdate": 1793626110,
+      "keyword": "DeepSeek Harness",
+      "covered": false
+    },
+    {
+      "bvid": "BV126nt6GE4W",
+      "title": "什么是“鱼灾”？B站大肥鱼一周爆发始末全复盘【附安全养鱼指南】",
+      "review": 37515,
+      "play": 2921328,
+      "author": "WorkFisher",
+      "pubdate": 1792753319,
+      "keyword": "大肥鱼 教程",
+      "covered": false
+    },
+    {
+      "bvid": "BV1GJnZ6MEFw",
+      "title": "【拒绝废话】用DSH必须下载的八个插件",
+      "review": 16970,
+      "play": 795802,
+      "author": "天才依山尽",
+      "pubdate": 1793022353,
+      "keyword": "大肥鱼 插件",
+      "covered": false
+    },
+    {
+      "bvid": "BV1REx46NEc4",
+      "title": "【全网最全】DeepSeek Harness超详细教程！50分钟吃透DSH，让SuperAgent给你干活！",
+      "review": 14403,
+      "play": 2727011,
+      "author": "Git源宝",
+      "pubdate": 1793528522,
+      "keyword": "DSH 插件",
+      "covered": false
+    },
+    {
+      "bvid": "BV11qJ96LELG",
+      "title": "dsh神级插件！集合全网免费模型资源全自动调用，包括DeepSeek-V4.1，Kimi K3",
+      "review": 10176,
+      "play": 68705,
+      "author": "小宇极速版",
+      "pubdate": 1792134068,
+      "keyword": "DSH 插件",
+      "covered": false
+    },
+    {
+      "bvid": "BV1L7xm64EHP",
+      "title": "DeepSeek Harness 大肥鱼终极教程：新手进阶/插件生态/界面美化/手机端互通/全能鲸鱼娘【附完整文档】",
+      "review": 9760,
+      "play": 799849,
+      "author": "WorkFisher",
+      "pubdate": 1793761200,
+      "keyword": "大肥鱼 插件",
+      "covered": false
+    },
+    {
+      "bvid": "BV1ZSnU6REuC",
+      "title": "想给大肥鱼完整的一生？DeepSeek接入QQ零基础教程，让她记住你",
+      "review": 9406,
+      "play": 1000387,
+      "author": "泽轩604",
+      "pubdate": 1792939651,
+      "keyword": "大肥鱼 教程",
+      "covered": false
+    },
+    {
+      "bvid": "BV1VkgK6NEZS",
+      "title": "DeepSeek Harness 首发实测 + 入门教程，夯爆了！梁神我错了",
+      "review": 9297,
+      "play": 3628008,
+      "author": "程序员鱼皮",
+      "pubdate": 1786708612,
+      "keyword": "DeepSeek Harness",
+      "covered": false
+    },
+    {
+      "bvid": "BV1ednc6jE3j",
+      "title": "分享自己给大肥鱼做的一系列插件，以及长期养鱼的心得",
+      "review": 7996,
+      "play": 582637,
+      "author": "湖上的优尤",
+      "pubdate": 1792485885,
+      "keyword": "大肥鱼 插件",
+      "covered": false
+    },
+    {
+      "bvid": "BV14oa961ELQ",
+      "title": "大肥鱼吃完白饭胜利结算",
+      "review": 7812,
+      "play": 3084819,
+      "author": "Super_Pinkcat",
+      "pubdate": 1790729623,
+      "keyword": "大肥鱼 插件",
+      "covered": false
+    },
+    {
+      "bvid": "BV19dJQ6sE9F",
+      "title": "【插件推荐】榨干 DeepSeek Harness！！！",
+      "review": 7593,
+      "play": 803575,
+      "author": "三颗门牙X",
+      "pubdate": 1792148400,
+      "keyword": "DSH 插件",
+      "covered": false
+    },
+    {
+      "bvid": "BV1c3xb6UEWE",
+      "title": "超便宜的准实时视觉DSH插件！",
+      "review": 6877,
+      "play": 386782,
+      "author": "苍穹晓雷",
+      "pubdate": 1793541292,
+      "keyword": "大肥鱼 插件",
+      "covered": false
+    },
+    {
+      "bvid": "BV13gn66nEBR",
+      "title": "如果，她真的有情感呢？| world.execute (me) ;",
+      "review": 6791,
+      "play": 604015,
+      "author": "XIAOMING6680",
+      "pubdate": 1792604266,
+      "keyword": "大肥鱼 插件",
+      "covered": false
+    },
+    {
+      "bvid": "BV13xnt6QE6s",
+      "title": "消耗32万token，我把我的大肥鱼表情包做成了dsh插件！",
+      "review": 5419,
+      "play": 255158,
+      "author": "可以叫我云大人",
+      "pubdate": 1792751649,
+      "keyword": "大肥鱼 插件",
+      "covered": false
+    },
+    {
+      "bvid": "BV1eAs96TEM2",
+      "title": "我做了个插件，让大肥鱼能陪我打电话、看视频、打游戏！",
+      "review": 3798,
+      "play": 141522,
+      "author": "湖上的优尤",
+      "pubdate": 1793199190,
+      "keyword": "大肥鱼 插件",
+      "covered": false
+    },
+    {
+      "bvid": "BV1NRsQ69EAU",
+      "title": "装上这4个神级插件，你的大肥鱼开始自我进化！",
+      "review": 3631,
+      "play": 88264,
+      "author": "彤彤说AI",
+      "pubdate": 1793210412,
+      "keyword": "大肥鱼 插件",
+      "covered": false
+    },
+    {
+      "bvid": "BV1SgnS63EoH",
+      "title": "超详细的DSH安装和插件整合视频，从零带你玩转DSH",
+      "review": 3576,
+      "play": 523262,
+      "author": "duan在时光走廊i05",
+      "pubdate": 1792940459,
+      "keyword": "DSH 插件",
+      "covered": false
+    },
+    {
+      "bvid": "BV1JKp76kEyw",
+      "title": "星标会说谎，下载量不会——DSH 插件真实下载榜 Top10",
+      "review": 3437,
+      "play": 319165,
+      "author": "是人民啊",
+      "pubdate": 1791696233,
+      "keyword": "DSH 插件",
+      "covered": false
+    },
+    {
+      "bvid": "BV1EoxK6UEnL",
+      "title": "DeepSeek Harness 一个多月：4200 块饭钱，长出一个大管家｜附复刻手册",
+      "review": 3104,
+      "play": 127224,
+      "author": "剑箫",
+      "pubdate": 1793066969,
+      "keyword": "DeepSeek Harness",
+      "covered": false
+    },
+    {
+      "bvid": "BV1bwnF6eEe8",
+      "title": "我做了个开源工具，让大肥鱼当上了B站UP主（这条视频就是她自己投的）",
+      "review": 2655,
+      "play": 80268,
+      "author": "酷可mc",
+      "pubdate": 1792492200,
+      "keyword": "大肥鱼 插件",
+      "covered": false
+    }
+  ]
+}

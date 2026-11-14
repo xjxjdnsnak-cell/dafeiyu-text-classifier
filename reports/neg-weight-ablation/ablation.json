@@ -1,0 +1,1138 @@
+{
+  "generated_at": "2026-11-14T07:38:32+00:00",
+  "design": {
+    "arm_a": "existing v8 baseline (weight 1 everywhere; reused artifact, not retrained)",
+    "arm_b": "same train split/params; unconfirmed human rows expected weight 0.5 (Bernoulli keep, seed 42); confirmed-human and AI rows weight 1",
+    "working_points": "v8 validation set, frozen protocol rule (1% cap, 2% secondary)",
+    "benchmark_use": "none (historical reference only)",
+    "status": "diagnostic ablation; not a release candidate; final verdicts need a fresh independent test set"
+  },
+  "sampling": {
+    "train_rows": 12961,
+    "ai_rows": 4431,
+    "human_rows": 8530,
+    "confirmed_human_kept": 1278,
+    "unconfirmed_total": 7252,
+    "unconfirmed_kept": 3646,
+    "keep_prob": 0.5,
+    "seed": 42
+  },
+  "arms": {
+    "A_v8_baseline": {
+      "model_sha256": "6e60c7abf39ec47ecd1d6d0c51bf7155a6f80aa221aacf2088650063e60101ed",
+      "thresholds": {
+        "fpr_1pct": 0.9700783414714084,
+        "fpr_2pct": 0.81666116626185
+      },
+      "threshold_source": "v8 validation selection (frozen artifact)",
+      "1pct": {
+        "threshold": 0.9700783414714084,
+        "all": {
+          "precision": 0.9775,
+          "recall": 0.818848167539267,
+          "f1": 0.8911680911680913,
+          "fpr": 0.009950248756218905,
+          "fpr_wilson_95": [
+            0.006303234389294134,
+            0.015674119795120945
+          ],
+          "confusion_matrix": [
+            [
+              1791,
+              18
+            ],
+            [
+              173,
+              782
+            ]
+          ],
+          "support": {
+            "normal": 1809,
+            "ai_style": 955
+          },
+          "predicted_positive": 800,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "ordinary_ai_recall": {
+          "precision": 1.0,
+          "recall": 0.7321428571428571,
+          "f1": 0.8453608247422679,
+          "fpr": null,
+          "fpr_wilson_95": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              30,
+              82
+            ]
+          ],
+          "support": {
+            "normal": 0,
+            "ai_style": 112
+          },
+          "predicted_positive": 82,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "low_score_rows": {
+          "rows": 1841,
+          "trigger_rate_overall": 0.023356871265616513,
+          "human_fpr": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.009950248756218905,
+            "fpr_wilson_95": [
+              0.006303234389294134,
+              0.015674119795120945
+            ],
+            "confusion_matrix": [
+              [
+                1791,
+                18
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 1809,
+              "ai_style": 0
+            },
+            "predicted_positive": 18,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "hard_ai_recall": {
+            "precision": 1.0,
+            "recall": 0.78125,
+            "f1": 0.8771929824561403,
+            "fpr": null,
+            "fpr_wilson_95": null,
+            "confusion_matrix": [
+              [
+                0,
+                0
+              ],
+              [
+                7,
+                25
+              ]
+            ],
+            "support": {
+              "normal": 0,
+              "ai_style": 32
+            },
+            "predicted_positive": 25,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "human_fpr_confirmed": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.004807692307692308,
+            "fpr_wilson_95": [
+              0.001319434265269686,
+              0.01735775603108705
+            ],
+            "confusion_matrix": [
+              [
+                414,
+                2
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 416,
+              "ai_style": 0
+            },
+            "predicted_positive": 2,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "human_fpr_unconfirmed": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.01148600143575018,
+            "fpr_wilson_95": [
+              0.007082311995058107,
+              0.018576619155907196
+            ],
+            "confusion_matrix": [
+              [
+                1377,
+                16
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 1393,
+              "ai_style": 0
+            },
+            "predicted_positive": 16,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "confirmed_human_rows": 416,
+          "unconfirmed_human_rows": 1393
+        },
+        "expansion_video_human_fpr": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.001059322033898305,
+          "fpr_wilson_95": [
+            0.0001870208316965931,
+            0.005975886230801051
+          ],
+          "confusion_matrix": [
+            [
+              943,
+              1
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "support": {
+            "normal": 944,
+            "ai_style": 0
+          },
+          "predicted_positive": 1,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "human_fpr_by_length": {
+          "1-20": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.016643550624133148,
+            "fpr_wilson_95": [
+              0.009546002031407113,
+              0.02886440962742895
+            ],
+            "confusion_matrix": [
+              [
+                709,
+                12
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 721,
+              "ai_style": 0
+            },
+            "predicted_positive": 12,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "21-60": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.0071174377224199285,
+            "fpr_wilson_95": [
+              0.003265948887940639,
+              0.015440573632525986
+            ],
+            "confusion_matrix": [
+              [
+                837,
+                6
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 843,
+              "ai_style": 0
+            },
+            "predicted_positive": 6,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "61+": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "fpr_wilson_95": [
+              0.0,
+              0.015437374619565052
+            ],
+            "confusion_matrix": [
+              [
+                245,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 245,
+              "ai_style": 0
+            },
+            "predicted_positive": 0,
+            "abstentions": 0,
+            "coverage": 1.0
+          }
+        }
+      },
+      "2pct": {
+        "threshold": 0.81666116626185,
+        "all": {
+          "precision": 0.9618834080717489,
+          "recall": 0.8984293193717278,
+          "f1": 0.9290741743367624,
+          "fpr": 0.018794914317302378,
+          "fpr_wilson_95": [
+            0.013480712728903312,
+            0.02614848841890642
+          ],
+          "confusion_matrix": [
+            [
+              1775,
+              34
+            ],
+            [
+              97,
+              858
+            ]
+          ],
+          "support": {
+            "normal": 1809,
+            "ai_style": 955
+          },
+          "predicted_positive": 892,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "ordinary_ai_recall": {
+          "precision": 1.0,
+          "recall": 0.8303571428571429,
+          "f1": 0.9073170731707317,
+          "fpr": null,
+          "fpr_wilson_95": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              19,
+              93
+            ]
+          ],
+          "support": {
+            "normal": 0,
+            "ai_style": 112
+          },
+          "predicted_positive": 93,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "low_score_rows": {
+          "rows": 1841,
+          "trigger_rate_overall": 0.03367734926670288,
+          "human_fpr": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.018794914317302378,
+            "fpr_wilson_95": [
+              0.013480712728903312,
+              0.02614848841890642
+            ],
+            "confusion_matrix": [
+              [
+                1775,
+                34
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 1809,
+              "ai_style": 0
+            },
+            "predicted_positive": 34,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "hard_ai_recall": {
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333,
+            "fpr": null,
+            "fpr_wilson_95": null,
+            "confusion_matrix": [
+              [
+                0,
+                0
+              ],
+              [
+                4,
+                28
+              ]
+            ],
+            "support": {
+              "normal": 0,
+              "ai_style": 32
+            },
+            "predicted_positive": 28,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "human_fpr_confirmed": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.019230769230769232,
+            "fpr_wilson_95": [
+              0.009776032196005605,
+              0.03748337585870968
+            ],
+            "confusion_matrix": [
+              [
+                408,
+                8
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 416,
+              "ai_style": 0
+            },
+            "predicted_positive": 8,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "human_fpr_unconfirmed": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.01866475233309404,
+            "fpr_wilson_95": [
+              0.012768766306365236,
+              0.027208182020926803
+            ],
+            "confusion_matrix": [
+              [
+                1367,
+                26
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 1393,
+              "ai_style": 0
+            },
+            "predicted_positive": 26,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "confirmed_human_rows": 416,
+          "unconfirmed_human_rows": 1393
+        },
+        "expansion_video_human_fpr": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.005296610169491525,
+          "fpr_wilson_95": [
+            0.002264453990955822,
+            0.01233868316018303
+          ],
+          "confusion_matrix": [
+            [
+              939,
+              5
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "support": {
+            "normal": 944,
+            "ai_style": 0
+          },
+          "predicted_positive": 5,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "human_fpr_by_length": {
+          "1-20": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.024965325936199722,
+            "fpr_wilson_95": [
+              0.015849124079387447,
+              0.039116631998521736
+            ],
+            "confusion_matrix": [
+              [
+                703,
+                18
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 721,
+              "ai_style": 0
+            },
+            "predicted_positive": 18,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "21-60": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.017793594306049824,
+            "fpr_wilson_95": [
+              0.0108123395457043,
+              0.029149637360600597
+            ],
+            "confusion_matrix": [
+              [
+                828,
+                15
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 843,
+              "ai_style": 0
+            },
+            "predicted_positive": 15,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "61+": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.004081632653061225,
+            "fpr_wilson_95": [
+              0.0007208721124959058,
+              0.022753748428542084
+            ],
+            "confusion_matrix": [
+              [
+                244,
+                1
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 245,
+              "ai_style": 0
+            },
+            "predicted_positive": 1,
+            "abstentions": 0,
+            "coverage": 1.0
+          }
+        }
+      }
+    },
+    "B_neg_weight_0p5": {
+      "model_sha256": "eed15abb3b638a84742c4e7dee6027daff158be5952e18d1a89ef0b447e214ba",
+      "thresholds": {
+        "fpr_1pct": 0.9891301702112978,
+        "fpr_2pct": 0.9345309276128444
+      },
+      "threshold_source": "selected on v8 validation with the frozen protocol rule",
+      "1pct": {
+        "threshold": 0.9891301702112978,
+        "all": {
+          "precision": 0.9775840597758406,
+          "recall": 0.8219895287958116,
+          "f1": 0.8930602957906711,
+          "fpr": 0.009950248756218905,
+          "fpr_wilson_95": [
+            0.006303234389294134,
+            0.015674119795120945
+          ],
+          "confusion_matrix": [
+            [
+              1791,
+              18
+            ],
+            [
+              170,
+              785
+            ]
+          ],
+          "support": {
+            "normal": 1809,
+            "ai_style": 955
+          },
+          "predicted_positive": 803,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "ordinary_ai_recall": {
+          "precision": 1.0,
+          "recall": 0.7410714285714286,
+          "f1": 0.8512820512820513,
+          "fpr": null,
+          "fpr_wilson_95": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              29,
+              83
+            ]
+          ],
+          "support": {
+            "normal": 0,
+            "ai_style": 112
+          },
+          "predicted_positive": 83,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "low_score_rows": {
+          "rows": 1841,
+          "trigger_rate_overall": 0.023356871265616513,
+          "human_fpr": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.009950248756218905,
+            "fpr_wilson_95": [
+              0.006303234389294134,
+              0.015674119795120945
+            ],
+            "confusion_matrix": [
+              [
+                1791,
+                18
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 1809,
+              "ai_style": 0
+            },
+            "predicted_positive": 18,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "hard_ai_recall": {
+            "precision": 1.0,
+            "recall": 0.78125,
+            "f1": 0.8771929824561403,
+            "fpr": null,
+            "fpr_wilson_95": null,
+            "confusion_matrix": [
+              [
+                0,
+                0
+              ],
+              [
+                7,
+                25
+              ]
+            ],
+            "support": {
+              "normal": 0,
+              "ai_style": 32
+            },
+            "predicted_positive": 25,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "human_fpr_confirmed": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.007211538461538462,
+            "fpr_wilson_95": [
+              0.0024555435799436844,
+              0.020985349676139478
+            ],
+            "confusion_matrix": [
+              [
+                413,
+                3
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 416,
+              "ai_style": 0
+            },
+            "predicted_positive": 3,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "human_fpr_unconfirmed": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.010768126346015794,
+            "fpr_wilson_95": [
+              0.006536398172575124,
+              0.017690731260757504
+            ],
+            "confusion_matrix": [
+              [
+                1378,
+                15
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 1393,
+              "ai_style": 0
+            },
+            "predicted_positive": 15,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "confirmed_human_rows": 416,
+          "unconfirmed_human_rows": 1393
+        },
+        "expansion_video_human_fpr": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.001059322033898305,
+          "fpr_wilson_95": [
+            0.0001870208316965931,
+            0.005975886230801051
+          ],
+          "confusion_matrix": [
+            [
+              943,
+              1
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "support": {
+            "normal": 944,
+            "ai_style": 0
+          },
+          "predicted_positive": 1,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "human_fpr_by_length": {
+          "1-20": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.019417475728155338,
+            "fpr_wilson_95": [
+              0.011601224991210694,
+              0.0323276348073164
+            ],
+            "confusion_matrix": [
+              [
+                707,
+                14
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 721,
+              "ai_style": 0
+            },
+            "predicted_positive": 14,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "21-60": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.004744958481613286,
+            "fpr_wilson_95": [
+              0.0018467225050934934,
+              0.012136365707409074
+            ],
+            "confusion_matrix": [
+              [
+                839,
+                4
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 843,
+              "ai_style": 0
+            },
+            "predicted_positive": 4,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "61+": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.0,
+            "fpr_wilson_95": [
+              0.0,
+              0.015437374619565052
+            ],
+            "confusion_matrix": [
+              [
+                245,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 245,
+              "ai_style": 0
+            },
+            "predicted_positive": 0,
+            "abstentions": 0,
+            "coverage": 1.0
+          }
+        }
+      },
+      "2pct": {
+        "threshold": 0.9345309276128444,
+        "all": {
+          "precision": 0.9596864501679732,
+          "recall": 0.8973821989528796,
+          "f1": 0.9274891774891775,
+          "fpr": 0.01990049751243781,
+          "fpr_wilson_95": [
+            0.014408964852313225,
+            0.027426717165920836
+          ],
+          "confusion_matrix": [
+            [
+              1773,
+              36
+            ],
+            [
+              98,
+              857
+            ]
+          ],
+          "support": {
+            "normal": 1809,
+            "ai_style": 955
+          },
+          "predicted_positive": 893,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "ordinary_ai_recall": {
+          "precision": 1.0,
+          "recall": 0.8125,
+          "f1": 0.896551724137931,
+          "fpr": null,
+          "fpr_wilson_95": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              21,
+              91
+            ]
+          ],
+          "support": {
+            "normal": 0,
+            "ai_style": 112
+          },
+          "predicted_positive": 91,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "low_score_rows": {
+          "rows": 1841,
+          "trigger_rate_overall": 0.03476371537208039,
+          "human_fpr": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.01990049751243781,
+            "fpr_wilson_95": [
+              0.014408964852313225,
+              0.027426717165920836
+            ],
+            "confusion_matrix": [
+              [
+                1773,
+                36
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 1809,
+              "ai_style": 0
+            },
+            "predicted_positive": 36,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "hard_ai_recall": {
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333,
+            "fpr": null,
+            "fpr_wilson_95": null,
+            "confusion_matrix": [
+              [
+                0,
+                0
+              ],
+              [
+                4,
+                28
+              ]
+            ],
+            "support": {
+              "normal": 0,
+              "ai_style": 32
+            },
+            "predicted_positive": 28,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "human_fpr_confirmed": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.019230769230769232,
+            "fpr_wilson_95": [
+              0.009776032196005605,
+              0.03748337585870968
+            ],
+            "confusion_matrix": [
+              [
+                408,
+                8
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 416,
+              "ai_style": 0
+            },
+            "predicted_positive": 8,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "human_fpr_unconfirmed": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.020100502512562814,
+            "fpr_wilson_95": [
+              0.013943034243391944,
+              0.028897517519165444
+            ],
+            "confusion_matrix": [
+              [
+                1365,
+                28
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 1393,
+              "ai_style": 0
+            },
+            "predicted_positive": 28,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "confirmed_human_rows": 416,
+          "unconfirmed_human_rows": 1393
+        },
+        "expansion_video_human_fpr": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.006355932203389831,
+          "fpr_wilson_95": [
+            0.002916140427658573,
+            0.013797054245640584
+          ],
+          "confusion_matrix": [
+            [
+              938,
+              6
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "support": {
+            "normal": 944,
+            "ai_style": 0
+          },
+          "predicted_positive": 6,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "human_fpr_by_length": {
+          "1-20": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.027739251040221916,
+            "fpr_wilson_95": [
+              0.018027494114172732,
+              0.0424567101034275
+            ],
+            "confusion_matrix": [
+              [
+                701,
+                20
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 721,
+              "ai_style": 0
+            },
+            "predicted_positive": 20,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "21-60": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.017793594306049824,
+            "fpr_wilson_95": [
+              0.0108123395457043,
+              0.029149637360600597
+            ],
+            "confusion_matrix": [
+              [
+                828,
+                15
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 843,
+              "ai_style": 0
+            },
+            "predicted_positive": 15,
+            "abstentions": 0,
+            "coverage": 1.0
+          },
+          "61+": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "fpr": 0.004081632653061225,
+            "fpr_wilson_95": [
+              0.0007208721124959058,
+              0.022753748428542084
+            ],
+            "confusion_matrix": [
+              [
+                244,
+                1
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "support": {
+              "normal": 245,
+              "ai_style": 0
+            },
+            "predicted_positive": 1,
+            "abstentions": 0,
+            "coverage": 1.0
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "mode": "text",
+  "format": "original",
+  "model_sha256": "09ad5609919e0e0c65461b3277141384b4a6d73fc86e26f65a94792934d97194",
+  "params": {
+    "dim": 32,
+    "bucket": 20000,
+    "epoch": 30,
+    "lr": 0.5,
+    "wordNgrams": 2,
+    "minn": 2,
+    "maxn": 4,
+    "minCount": 1,
+    "loss": "softmax",
+    "thread": 1,
+    "seed": 42,
+    "verbose": 0
+  },
+  "bag_seed": 20261103,
+  "bag_index": 3,
+  "rows": {
+    "P": 4431,
+    "U_subset": 1451,
+    "total": 5882
+  },
+  "training_input": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\pu-experiment-20261114\\models\\bag_3\\train.txt",
+  "training_input_sha256": "6bb4bde455758ee62691ea4a28fa8af6076394a9ee01d173dc76b9d11909a795",
+  "parent_data": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\data-text-specialist-20261114-v8",
+  "role": "PU bag base model; diagnostic only"
+}

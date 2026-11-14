@@ -1,0 +1,143 @@
+{
+  "frozen": true,
+  "frozen_at": "2026-11-14T06:56:32+00:00",
+  "comments_sha256": "d26b9b56ab03a22f246b9897ee6778868a66be5127d3379e0a773d484fc22edc",
+  "policy": "label = score>=30; mention-only excluded; gray policy v3 excluded (label 0 only); NO user review, NO correction loop",
+  "gray_policy_version": "2026-11-14-user-gray-v3",
+  "disjointness": {
+    "rule": "uid, normalized text, or bvid may not appear anywhere in data-rule-ge30-20261114-r2 (covers train/validation/test of v5..v8 and all earlier corpora)",
+    "corpus_rows_checked": 19317,
+    "corpus_uids": 13922,
+    "corpus_texts": 18644,
+    "corpus_videos": 51,
+    "dropped": {
+      "uid_in_training_corpus": 1111,
+      "gray_v3": 359,
+      "mention_only": 195,
+      "text_in_training_corpus": 540,
+      "duplicate_in_batch": 18
+    }
+  },
+  "rows": 12777,
+  "labels": {
+    "1": 4175,
+    "0": 8602
+  },
+  "videos": 18,
+  "uids": 9520,
+  "per_video": {
+    "BV11qJ96LELG": {
+      "label": {
+        "1": 1082,
+        "0": 583
+      }
+    },
+    "BV126nt6GE4W": {
+      "label": {
+        "0": 787,
+        "1": 905
+      }
+    },
+    "BV1GJnZ6MEFw": {
+      "label": {
+        "1": 1028,
+        "0": 580
+      }
+    },
+    "BV1REx46NEc4": {
+      "label": {
+        "0": 500,
+        "1": 1141
+      }
+    },
+    "BV11PZsY8EtB": {
+      "label": {
+        "0": 466,
+        "1": 1
+      }
+    },
+    "BV13HQmYREU2": {
+      "label": {
+        "0": 445,
+        "1": 1
+      }
+    },
+    "BV16s411j727": {
+      "label": {
+        "0": 463,
+        "1": 1
+      }
+    },
+    "BV17VZpY1ENA": {
+      "label": {
+        "0": 407
+      }
+    },
+    "BV1HTZpYSExJ": {
+      "label": {
+        "0": 442,
+        "1": 10
+      }
+    },
+    "BV1JhZcY9EFN": {
+      "label": {
+        "0": 404
+      }
+    },
+    "BV1L6ZvY1EEU": {
+      "label": {
+        "0": 478
+      }
+    },
+    "BV1LxZfYVEdT": {
+      "label": {
+        "0": 486,
+        "1": 1
+      }
+    },
+    "BV1Pho9YrEre": {
+      "label": {
+        "0": 469,
+        "1": 1
+      }
+    },
+    "BV1RxXqYNEyH": {
+      "label": {
+        "0": 420
+      }
+    },
+    "BV1Sx411j7Hc": {
+      "label": {
+        "0": 477,
+        "1": 1
+      }
+    },
+    "BV1WA411v7nS": {
+      "label": {
+        "0": 474
+      }
+    },
+    "BV1X8oXYpEjY": {
+      "label": {
+        "0": 323,
+        "1": 1
+      }
+    },
+    "BV1dRQmYwEYn": {
+      "label": {
+        "0": 398,
+        "1": 2
+      }
+    }
+  },
+  "ai_pool_videos": [
+    "BV11qJ96LELG",
+    "BV126nt6GE4W",
+    "BV1GJnZ6MEFw",
+    "BV1REx46NEc4"
+  ],
+  "exports_sha256": {
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\out\\prospective-benchmark-20261114\\ai\\export\\all_scored.jsonl": "d26e12f712b2b32bbc101edcd0b70af78238e4ae6b034bda123e18e6d0d08661",
+    "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\out\\prospective-benchmark-20261114\\topics\\export\\all_scored.jsonl": "1feff2df8218dfbbd25b5456cb99819eed39264c107ef2fbb140f7d7679a9864"
+  }
+}

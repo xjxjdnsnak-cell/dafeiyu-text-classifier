@@ -1,0 +1,107 @@
+{
+  "excluded_videos": 56,
+  "ai_pool": [
+    {
+      "bvid": "BV126nt6GE4W",
+      "title": "什么是鱼灾？B站大肥鱼一周爆发始末全复盘【附安全养鱼指南】"
+    },
+    {
+      "bvid": "BV1GJnZ6MEFw",
+      "title": "【拒绝废话】用DSH必须下载的八个插件"
+    },
+    {
+      "bvid": "BV1REx46NEc4",
+      "title": "【全网最全】DeepSeek Harness超详细教程！50分钟吃透DSH"
+    },
+    {
+      "bvid": "BV11qJ96LELG",
+      "title": "dsh神级插件！集合全网免费模型资源全自动调用"
+    }
+  ],
+  "topic_pool": [
+    {
+      "bvid": "BV13HQmYREU2",
+      "region": "1:动画",
+      "title": "“反 乌 托 邦”",
+      "reply": 4535
+    },
+    {
+      "bvid": "BV17VZpY1ENA",
+      "region": "3:音乐",
+      "title": "给我们的组合起个名！",
+      "reply": 42859
+    },
+    {
+      "bvid": "BV1HTZpYSExJ",
+      "region": "4:游戏",
+      "title": "《绝区零》星徽骑士EP丨拂晓之空 闪耀之誓",
+      "reply": 19095
+    },
+    {
+      "bvid": "BV1L6ZvY1EEU",
+      "region": "5:娱乐",
+      "title": "美美洗白变史诗翻车，赵露思的灾难性公关太炸裂了【小小的勇气】",
+      "reply": 20616
+    },
+    {
+      "bvid": "BV1WA411v7nS",
+      "region": "23:电影",
+      "title": "天气之子（2019）【新海诚】",
+      "reply": 78312
+    },
+    {
+      "bvid": "BV1Pho9YrEre",
+      "region": "36:知识",
+      "title": "美国刹不住的贸易逆差，根本原因是什么?",
+      "reply": 8977
+    },
+    {
+      "bvid": "BV1dRQmYwEYn",
+      "region": "129:舞蹈",
+      "title": "重庆taxi漫展打卡 #漫展 #cos #社恐 ＃浅跳一下#随拍",
+      "reply": 5442
+    },
+    {
+      "bvid": "BV1LxZfYVEdT",
+      "region": "155:时尚",
+      "title": "小米SU7爆燃——下次喊“SU7稳了”时，先让中国父母敢让孩子，坐进你赌上尊严造的车！",
+      "reply": 5380
+    },
+    {
+      "bvid": "BV1JhZcY9EFN",
+      "region": "160:生活",
+      "title": "需要喝自己胆汁的小女孩珍珍，希望以后的生活苦味追不上你",
+      "reply": 20978
+    },
+    {
+      "bvid": "BV1X8oXYpEjY",
+      "region": "181:影视",
+      "title": "半夜睡不着室友非得拉着我们来航海",
+      "reply": 9001
+    },
+    {
+      "bvid": "BV16s411j727",
+      "region": "177:纪录片",
+      "title": "【纪录片】人生一串 第1集 无肉不欢",
+      "reply": 23261
+    },
+    {
+      "bvid": "BV11PZsY8EtB",
+      "region": "188:科幻",
+      "title": "我国首个脑机接口指导价发布，震惊世界科技和医学两界",
+      "reply": 7681
+    },
+    {
+      "bvid": "BV1Sx411j7Hc",
+      "region": "11:电视剧",
+      "title": "【奇幻】巴啦啦小魔仙 全52集【2008】",
+      "reply": 45493
+    },
+    {
+      "bvid": "BV1RxXqYNEyH",
+      "region": "119:鬼畜",
+      "title": "🧊姨 动🥒超 祥 大 冒 险⚡【洗脑循环】",
+      "reply": 16911
+    }
+  ]
+}
