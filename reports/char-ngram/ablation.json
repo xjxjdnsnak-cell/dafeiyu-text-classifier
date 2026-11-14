@@ -1,0 +1,446 @@
+{
+  "generated_at": "2026-11-14T09:42:53+00:00",
+  "subword_scope_check": {
+    "conclusion": "v8 的 minn=2/maxn=4 子词只在单个 txt_ token 内部（含 < > 边界与 txt_ 前缀样板），不存在跨 jieba 边界的字符 N-gram",
+    "token_评分": [
+      "txt_评分",
+      "<t",
+      "<tx",
+      "<txt",
+      "tx",
+      "txt",
+      "txt_",
+      "xt",
+      "xt_",
+      "xt_评",
+      "t_",
+      "t_评",
+      "t_评分",
+      "_评",
+      "_评分",
+      "_评分>",
+      "评分",
+      "评分>",
+      "分>"
+    ],
+    "token_很高": [
+      "<t",
+      "<tx",
+      "<txt",
+      "tx",
+      "txt",
+      "txt_",
+      "xt",
+      "xt_",
+      "xt_很",
+      "t_",
+      "t_很",
+      "t_很高",
+      "_很",
+      "_很高",
+      "_很高>",
+      "很高",
+      "很高>",
+      "高>"
+    ],
+    "cross_boundary_string_txt_评高": [
+      "<t",
+      "<tx",
+      "<txt",
+      "tx",
+      "txt",
+      "txt_",
+      "xt",
+      "xt_",
+      "xt_评",
+      "t_",
+      "t_评",
+      "t_评高",
+      "_评",
+      "_评高",
+      "_评高>",
+      "评高",
+      "评高>",
+      "高>"
+    ],
+    "shared_prefix_subwords": [
+      "<t",
+      "<tx",
+      "<txt",
+      "t_",
+      "tx",
+      "txt",
+      "txt_",
+      "xt",
+      "xt_"
+    ],
+    "cross_boundary_gram_present": true
+  },
+  "design": {
+    "arm_a": "frozen v8 artifact",
+    "arm_b": "v8 train + appended chx_ char 2/3/4-grams (crossing token boundaries)",
+    "params": {
+      "dim": 32,
+      "bucket": 20000,
+      "epoch": 30,
+      "lr": 0.5,
+      "wordNgrams": 2,
+      "minn": 2,
+      "maxn": 4,
+      "minCount": 1,
+      "loss": "softmax",
+      "thread": 1,
+      "seed": 42,
+      "verbose": 0
+    },
+    "shuffle_seed": 42,
+    "working_points": "v8 validation, frozen protocol rule (1% cap, 2% secondary)",
+    "benchmark_use": "none",
+    "status": "diagnostic; v8 untouched"
+  },
+  "feature_counts": {
+    "A": {
+      "unique": {
+        "txt": 20558,
+        "chx": 0,
+        "other": 0
+      },
+      "total": {
+        "txt": 331226,
+        "chx": 0,
+        "other": 0
+      },
+      "avg_per_line": {
+        "txt": 25.56,
+        "chx": 0.0,
+        "other": 0.0
+      }
+    },
+    "B": {
+      "unique": {
+        "txt": 20558,
+        "chx": 661087,
+        "other": 13084
+      },
+      "total": {
+        "txt": 331226,
+        "chx": 1396028,
+        "other": 87812
+      },
+      "avg_per_line": {
+        "txt": 25.56,
+        "chx": 107.71,
+        "other": 6.78
+      }
+    },
+    "train_file_bytes": {
+      "A": 3088898,
+      "B": 21008565
+    }
+  },
+  "results": {
+    "A_v8_frozen": {
+      "thresholds": {
+        "fpr_1pct": 0.9700783414714084,
+        "fpr_2pct": 0.81666116626185
+      },
+      "threshold_source": "v8 validation selection (frozen artifact)",
+      "1pct": {
+        "threshold": 0.9700783414714084,
+        "all": {
+          "precision": 0.9775,
+          "recall": 0.818848167539267,
+          "f1": 0.8911680911680913,
+          "fpr": 0.009950248756218905,
+          "fpr_wilson_95": [
+            0.006303234389294134,
+            0.015674119795120945
+          ],
+          "confusion_matrix": [
+            [
+              1791,
+              18
+            ],
+            [
+              173,
+              782
+            ]
+          ],
+          "support": {
+            "normal": 1809,
+            "ai_style": 955
+          },
+          "predicted_positive": 800,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "ordinary_ai_recall": {
+          "recall": 0.7321428571428571,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              30,
+              82
+            ]
+          ],
+          "rows": 112
+        },
+        "length_ai_recall": {
+          "1-20": {
+            "recall": 0.4852941176470588,
+            "ai_rows": 68
+          },
+          "21-60": {
+            "recall": 0.7900990099009901,
+            "ai_rows": 505
+          },
+          "61+": {
+            "recall": 0.9162303664921466,
+            "ai_rows": 382
+          }
+        },
+        "h_evidence_trigger": {
+          "h_rows": 419,
+          "h_account_rows": 419,
+          "h_comment_rows": 0,
+          "h_all_fpr": 0.00477326968973747,
+          "h_account_fpr": 0.00477326968973747,
+          "h_comment_fpr": null
+        }
+      },
+      "2pct": {
+        "threshold": 0.81666116626185,
+        "all": {
+          "precision": 0.9618834080717489,
+          "recall": 0.8984293193717278,
+          "f1": 0.9290741743367624,
+          "fpr": 0.018794914317302378,
+          "fpr_wilson_95": [
+            0.013480712728903312,
+            0.02614848841890642
+          ],
+          "confusion_matrix": [
+            [
+              1775,
+              34
+            ],
+            [
+              97,
+              858
+            ]
+          ],
+          "support": {
+            "normal": 1809,
+            "ai_style": 955
+          },
+          "predicted_positive": 892,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "ordinary_ai_recall": {
+          "recall": 0.8303571428571429,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              19,
+              93
+            ]
+          ],
+          "rows": 112
+        },
+        "length_ai_recall": {
+          "1-20": {
+            "recall": 0.6323529411764706,
+            "ai_rows": 68
+          },
+          "21-60": {
+            "recall": 0.8891089108910891,
+            "ai_rows": 505
+          },
+          "61+": {
+            "recall": 0.9581151832460733,
+            "ai_rows": 382
+          }
+        },
+        "h_evidence_trigger": {
+          "h_rows": 419,
+          "h_account_rows": 419,
+          "h_comment_rows": 0,
+          "h_all_fpr": 0.01909307875894988,
+          "h_account_fpr": 0.01909307875894988,
+          "h_comment_fpr": null
+        }
+      }
+    },
+    "B_char_ngram_augmented": {
+      "model_sha256": "5b611fa524aaa5dcc58c589600a8560081d5fab83d99f8b8e458fac4d19a7110",
+      "thresholds": {
+        "fpr_1pct": 2.4828992842348354e-05,
+        "fpr_2pct": 1.161191740065702e-05
+      },
+      "threshold_source": "selected on v8 validation (frozen protocol rule)",
+      "1pct": {
+        "threshold": 2.4828992842348354e-05,
+        "all": {
+          "precision": 0.9762219286657859,
+          "recall": 0.7738219895287958,
+          "f1": 0.8633177570093458,
+          "fpr": 0.009950248756218905,
+          "fpr_wilson_95": [
+            0.006303234389294134,
+            0.015674119795120945
+          ],
+          "confusion_matrix": [
+            [
+              1791,
+              18
+            ],
+            [
+              216,
+              739
+            ]
+          ],
+          "support": {
+            "normal": 1809,
+            "ai_style": 955
+          },
+          "predicted_positive": 757,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "ordinary_ai_recall": {
+          "recall": 0.6607142857142857,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              38,
+              74
+            ]
+          ],
+          "rows": 112
+        },
+        "length_ai_recall": {
+          "1-20": {
+            "recall": 0.23529411764705882,
+            "ai_rows": 68
+          },
+          "21-60": {
+            "recall": 0.7465346534653465,
+            "ai_rows": 505
+          },
+          "61+": {
+            "recall": 0.9057591623036649,
+            "ai_rows": 382
+          }
+        },
+        "h_evidence_trigger": {
+          "h_rows": 419,
+          "h_account_rows": 419,
+          "h_comment_rows": 0,
+          "h_all_fpr": 0.00477326968973747,
+          "h_account_fpr": 0.00477326968973747,
+          "h_comment_fpr": null
+        }
+      },
+      "2pct": {
+        "threshold": 1.161191740065702e-05,
+        "all": {
+          "precision": 0.9576470588235294,
+          "recall": 0.8523560209424084,
+          "f1": 0.901939058171745,
+          "fpr": 0.01990049751243781,
+          "fpr_wilson_95": [
+            0.014408964852313225,
+            0.027426717165920836
+          ],
+          "confusion_matrix": [
+            [
+              1773,
+              36
+            ],
+            [
+              141,
+              814
+            ]
+          ],
+          "support": {
+            "normal": 1809,
+            "ai_style": 955
+          },
+          "predicted_positive": 850,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "ordinary_ai_recall": {
+          "recall": 0.7678571428571429,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              26,
+              86
+            ]
+          ],
+          "rows": 112
+        },
+        "length_ai_recall": {
+          "1-20": {
+            "recall": 0.36764705882352944,
+            "ai_rows": 68
+          },
+          "21-60": {
+            "recall": 0.8376237623762376,
+            "ai_rows": 505
+          },
+          "61+": {
+            "recall": 0.9581151832460733,
+            "ai_rows": 382
+          }
+        },
+        "h_evidence_trigger": {
+          "h_rows": 419,
+          "h_account_rows": 419,
+          "h_comment_rows": 0,
+          "h_all_fpr": 0.014319809069212411,
+          "h_account_fpr": 0.014319809069212411,
+          "h_comment_fpr": null
+        }
+      }
+    }
+  },
+  "per_row_diff_1pct": {
+    "positives_a_correct_b_missed": 66,
+    "positives_a_missed_b_correct": 23,
+    "negatives_new_triggers_b": 14,
+    "negatives_removed_triggers_b": 14,
+    "positives_both_correct": 716,
+    "positives_both_missed": 150
+  },
+  "perf": {
+    "a_load_ms": 35.72349999740254,
+    "b_load_ms": 979.9539999985427,
+    "a_score_200_ms": 3.2460666661791038,
+    "b_score_200_ms": 3.789866666920716,
+    "b_train_seconds": 51.72691750000013
+  },
+  "sizes": {
+    "a_model_bytes": 5606915,
+    "b_model_bytes": 107469399
+  },
+  "limits": [
+    "召回率为与机械规则标签的一致性，不是真实 AI 来源识别率",
+    "验证集普通昵称 AI 仅 112 行，±1 行即 ±0.9pp",
+    "单次实验、单划分；未做超参数搜索；结果不触发发布或后续训练"
+  ]
+}

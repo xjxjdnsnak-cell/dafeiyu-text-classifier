@@ -1,0 +1,92 @@
+{
+  "line_count": {
+    "A": 12961,
+    "B": 12961,
+    "equal": true
+  },
+  "labels": {
+    "A": {
+      "0": 8530,
+      "1": 4431
+    },
+    "B": {
+      "0": 8530,
+      "1": 4431
+    },
+    "match": true
+  },
+  "txt_features_per_line": {
+    "A_identical_to_B": true,
+    "A_avg": 25.555589846462464,
+    "B_avg": 25.555589846462464
+  },
+  "sfx": {
+    "lines_with_sfx": 12961,
+    "total_lines": 12961,
+    "avg_sfx_per_line": 5.000462927243269
+  },
+  "sfx_in_vocab": {
+    "count": 19,
+    "tokens": [
+      "sfx_不仅还_1",
+      "sfx_不是而是_1",
+      "sfx_与其说不如说_1",
+      "sfx_句子数_1",
+      "sfx_句子数_2-3",
+      "sfx_句子数_4-6",
+      "sfx_句子数_7+",
+      "sfx_句长变化_中",
+      "sfx_句长变化_低",
+      "sfx_句长变化_高",
+      "sfx_平均句长_中",
+      "sfx_平均句长_短",
+      "sfx_平均句长_长",
+      "sfx_连接词比例_0",
+      "sfx_连接词比例_低",
+      "sfx_连接词比例_高",
+      "sfx_重复句式_0",
+      "sfx_重复句式_1",
+      "sfx_重复句式_多"
+    ]
+  },
+  "vocab_size": {
+    "B": 20578,
+    "A": 20559
+  },
+  "vocab_shared": 20559,
+  "vocab_only_in_B": 19,
+  "vocab_only_in_A": 0,
+  "params_match": "B metadata not written; params verified via DEFAULT_PARAMS in run script",
+  "params": {
+    "dim": 32,
+    "bucket": 20000,
+    "epoch": 30,
+    "lr": 0.5,
+    "wordNgrams": 2,
+    "minn": 2,
+    "maxn": 4,
+    "minCount": 1,
+    "loss": "softmax",
+    "thread": 1,
+    "seed": 42,
+    "verbose": 0
+  },
+  "threshold_selection": {
+    "B_selected_1pct": 0.9999811991413456,
+    "B_selected_1pct_metrics": {
+      "recall": 0.48900523560209425,
+      "fpr": 0.009950248756218905
+    },
+    "B_selected_2pct": 0.9991504146763235,
+    "B_selected_2pct_metrics": {
+      "recall": 0.7403141361256544,
+      "fpr": 0.01990049751243781
+    },
+    "recorded_in_metadata": "not available (B metadata not written)"
+  },
+  "a_threshold_integrity": {
+    "frozen_1pct": 0.9700783414714084,
+    "metadata_1pct": 0.9700783414714084,
+    "match": true
+  }
+}

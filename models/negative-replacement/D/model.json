@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "mode": "text",
+  "format": "original",
+  "model_sha256": "d7c970055474cb177b35e77896b4e4219242638beefc7f520962dbbeff98126e",
+  "params": {
+    "dim": 32,
+    "bucket": 20000,
+    "epoch": 30,
+    "lr": 0.5,
+    "wordNgrams": 2,
+    "minn": 2,
+    "maxn": 4,
+    "minCount": 1,
+    "loss": "softmax",
+    "thread": 1,
+    "seed": 42,
+    "verbose": 0
+  },
+  "arm": "D_equal_replacement",
+  "training_input": "C:\\Users\\<user>\\Documents\\ChatGPT\\屏蔽大肥鱼\\fasttext-classifier\\experiments\\negative-replacement-ablation-20261114\\models\\D\\train.txt",
+  "training_input_sha256": "e763693ae39e9a6163e3672e5f021277bbccc8cde9def989603030f73e368b3c",
+  "training_rows": 12961,
+  "composition": {
+    "P": 4431,
+    "H": 1279,
+    "old_U_remaining": 1991,
+    "historical_negatives": 5260
+  },
+  "note": "等量替换消融：旧 U 分层移除 5,173，历史负类等量补入；总量与 v8 训练集一致",
+  "threshold_source": "selected on v8 validation (frozen protocol rule)"
+}

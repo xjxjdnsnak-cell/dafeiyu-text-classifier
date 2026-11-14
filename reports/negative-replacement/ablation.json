@@ -1,0 +1,413 @@
+{
+  "generated_at": "2026-11-14T09:20:15+00:00",
+  "design": {
+    "arm_a": "frozen v8 artifact",
+    "arm_d": "equal replacement: 5,173 old U removed (stratified rule band x length), 5,173 historical negatives added",
+    "params": {
+      "dim": 32,
+      "bucket": 20000,
+      "epoch": 30,
+      "lr": 0.5,
+      "wordNgrams": 2,
+      "minn": 2,
+      "maxn": 4,
+      "minCount": 1,
+      "loss": "softmax",
+      "thread": 1,
+      "seed": 42,
+      "verbose": 0
+    },
+    "shuffle_seed": 42,
+    "removal_seed": 42,
+    "composition": {
+      "P": 4431,
+      "H": 1279,
+      "old_U_remaining": 1991,
+      "historical_negatives": 5260,
+      "total": 12961
+    },
+    "working_points": "v8 validation, frozen protocol rule; benchmark diagnostic once after freeze",
+    "status": "diagnostic; v8 untouched; stop criterion applies"
+  },
+  "removal": {
+    "targets": {
+      "0-9|1-20": 2553,
+      "0-9|21-60": 2099,
+      "0-9|61+": 475,
+      "10-19|1-20": 6,
+      "10-19|21-60": 16,
+      "10-19|61+": 17,
+      "20-29|1-20": 1,
+      "20-29|21-60": 5,
+      "20-29|61+": 1
+    },
+    "by_band": {
+      "0-9": 5213,
+      "10-19": 40,
+      "20-29": 7
+    },
+    "by_length": {
+      "1-20": 2604,
+      "21-60": 2155,
+      "61+": 501
+    }
+  },
+  "added": {
+    "month_profile": {
+      "2023-03": 562,
+      "2023-04": 88,
+      "2023-05": 8,
+      "2023-06": 9,
+      "2023-07": 412,
+      "2023-08": 80,
+      "2023-09": 33,
+      "2023-10": 31,
+      "2023-11": 17,
+      "2023-12": 31,
+      "2024-01": 17,
+      "2024-02": 9,
+      "2024-03": 19,
+      "2024-04": 14,
+      "2024-05": 7,
+      "2024-06": 6,
+      "2024-07": 4,
+      "2024-08": 7,
+      "2024-09": 2,
+      "2024-10": 3,
+      "2024-11": 1,
+      "2024-12": 5,
+      "2025-02": 1262,
+      "2025-03": 149,
+      "2025-04": 192,
+      "2025-05": 33,
+      "2025-06": 160,
+      "2025-07": 86,
+      "2025-08": 40,
+      "2025-09": 31,
+      "2025-10": 21,
+      "2025-11": 21,
+      "2025-12": 21,
+      "2026-01": 29,
+      "2026-02": 26,
+      "2026-03": 300,
+      "2026-04": 216,
+      "2026-05": 215,
+      "2026-06": 168,
+      "2026-07": 354,
+      "2026-08": 227,
+      "2026-09": 344
+    },
+    "length": {
+      "1-20": 2767,
+      "21-60": 1904,
+      "61+": 589
+    },
+    "topic": {
+      "ai_domain": 5260
+    }
+  },
+  "isolation_audit": {
+    "candidates": 17477,
+    "new_rows": 5298,
+    "eligible": 5260,
+    "train_ai_body_conflict_check": true,
+    "exclusions": {
+      "uid_in_validation_or_test_or_benchmark": 14,
+      "body_in_validation_or_test_or_benchmark": 24
+    },
+    "protected_uids_val_test_bench": 13278,
+    "protected_videos_val_test_bench": 33
+  },
+  "results": {
+    "A_v8_frozen": {
+      "thresholds": {
+        "fpr_1pct": 0.9700783414714084,
+        "fpr_2pct": 0.81666116626185
+      },
+      "1pct": {
+        "threshold": 0.9700783414714084,
+        "all": {
+          "precision": 0.9775,
+          "recall": 0.818848167539267,
+          "f1": 0.8911680911680913,
+          "fpr": 0.009950248756218905,
+          "fpr_wilson_95": [
+            0.006303234389294134,
+            0.015674119795120945
+          ],
+          "confusion_matrix": [
+            [
+              1791,
+              18
+            ],
+            [
+              173,
+              782
+            ]
+          ],
+          "support": {
+            "normal": 1809,
+            "ai_style": 955
+          },
+          "predicted_positive": 800,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "ordinary_ai_recall": {
+          "recall": 0.7321428571428571,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              30,
+              82
+            ]
+          ],
+          "rows": 112
+        },
+        "length_ai_recall": {
+          "1-20": {
+            "recall": 0.4852941176470588,
+            "ai_rows": 68
+          },
+          "21-60": {
+            "recall": 0.7900990099009901,
+            "ai_rows": 505
+          },
+          "61+": {
+            "recall": 0.9162303664921466,
+            "ai_rows": 382
+          }
+        },
+        "human_trigger": {
+          "all_fpr": 0.009950248756218905,
+          "h_account_rows": 419,
+          "h_account_fpr": 0.00477326968973747
+        },
+        "expansion_video_human_fpr": 0.001059322033898305
+      },
+      "2pct": {
+        "threshold": 0.81666116626185,
+        "all": {
+          "precision": 0.9618834080717489,
+          "recall": 0.8984293193717278,
+          "f1": 0.9290741743367624,
+          "fpr": 0.018794914317302378,
+          "fpr_wilson_95": [
+            0.013480712728903312,
+            0.02614848841890642
+          ],
+          "confusion_matrix": [
+            [
+              1775,
+              34
+            ],
+            [
+              97,
+              858
+            ]
+          ],
+          "support": {
+            "normal": 1809,
+            "ai_style": 955
+          },
+          "predicted_positive": 892,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "ordinary_ai_recall": {
+          "recall": 0.8303571428571429,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              19,
+              93
+            ]
+          ],
+          "rows": 112
+        },
+        "length_ai_recall": {
+          "1-20": {
+            "recall": 0.6323529411764706,
+            "ai_rows": 68
+          },
+          "21-60": {
+            "recall": 0.8891089108910891,
+            "ai_rows": 505
+          },
+          "61+": {
+            "recall": 0.9581151832460733,
+            "ai_rows": 382
+          }
+        },
+        "human_trigger": {
+          "all_fpr": 0.018794914317302378,
+          "h_account_rows": 419,
+          "h_account_fpr": 0.01909307875894988
+        },
+        "expansion_video_human_fpr": 0.005296610169491525
+      }
+    },
+    "D_equal_replacement": {
+      "model_sha256": "d7c970055474cb177b35e77896b4e4219242638beefc7f520962dbbeff98126e",
+      "thresholds": {
+        "fpr_1pct": 0.9523935003269101,
+        "fpr_2pct": 0.71367344633095
+      },
+      "threshold_source": "selected on v8 validation (frozen protocol rule)",
+      "1pct": {
+        "threshold": 0.9523935003269101,
+        "all": {
+          "precision": 0.9767741935483871,
+          "recall": 0.7926701570680629,
+          "f1": 0.8751445086705203,
+          "fpr": 0.009950248756218905,
+          "fpr_wilson_95": [
+            0.006303234389294134,
+            0.015674119795120945
+          ],
+          "confusion_matrix": [
+            [
+              1791,
+              18
+            ],
+            [
+              198,
+              757
+            ]
+          ],
+          "support": {
+            "normal": 1809,
+            "ai_style": 955
+          },
+          "predicted_positive": 775,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "ordinary_ai_recall": {
+          "recall": 0.6964285714285714,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              34,
+              78
+            ]
+          ],
+          "rows": 112
+        },
+        "length_ai_recall": {
+          "1-20": {
+            "recall": 0.4411764705882353,
+            "ai_rows": 68
+          },
+          "21-60": {
+            "recall": 0.7683168316831683,
+            "ai_rows": 505
+          },
+          "61+": {
+            "recall": 0.887434554973822,
+            "ai_rows": 382
+          }
+        },
+        "human_trigger": {
+          "all_fpr": 0.009950248756218905,
+          "h_account_rows": 419,
+          "h_account_fpr": 0.00954653937947494
+        },
+        "expansion_video_human_fpr": 0.001059322033898305
+      },
+      "2pct": {
+        "threshold": 0.71367344633095,
+        "all": {
+          "precision": 0.9590909090909091,
+          "recall": 0.8837696335078534,
+          "f1": 0.919891008174387,
+          "fpr": 0.01990049751243781,
+          "fpr_wilson_95": [
+            0.014408964852313225,
+            0.027426717165920836
+          ],
+          "confusion_matrix": [
+            [
+              1773,
+              36
+            ],
+            [
+              111,
+              844
+            ]
+          ],
+          "support": {
+            "normal": 1809,
+            "ai_style": 955
+          },
+          "predicted_positive": 880,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "ordinary_ai_recall": {
+          "recall": 0.8303571428571429,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              19,
+              93
+            ]
+          ],
+          "rows": 112
+        },
+        "length_ai_recall": {
+          "1-20": {
+            "recall": 0.5147058823529411,
+            "ai_rows": 68
+          },
+          "21-60": {
+            "recall": 0.8792079207920792,
+            "ai_rows": 505
+          },
+          "61+": {
+            "recall": 0.9554973821989529,
+            "ai_rows": 382
+          }
+        },
+        "human_trigger": {
+          "all_fpr": 0.01990049751243781,
+          "h_account_rows": 419,
+          "h_account_fpr": 0.028639618138424822
+        },
+        "expansion_video_human_fpr": 0.00211864406779661
+      }
+    }
+  },
+  "benchmark_diagnostic": {
+    "A_v8_frozen": {
+      "dsh_community_trigger": 0.5514285714285714,
+      "general_topic_trigger": 0.004063719115734721,
+      "ordinary_ai_recall": 0.8798882681564246,
+      "short_ai_recall": 0.46204620462046203
+    },
+    "D_equal_replacement": {
+      "dsh_community_trigger": 0.5020408163265306,
+      "general_topic_trigger": 0.002925877763328999,
+      "ordinary_ai_recall": 0.8296089385474861,
+      "short_ai_recall": 0.38283828382838286
+    }
+  },
+  "limits": [
+    "召回率为与机械规则标签的一致性，不是真实 AI 来源识别率",
+    "历史负类为时间代理标签（authorship_verified=false）",
+    "验证集普通昵称 AI 仅 112 行；±1 行即 ±0.9pp",
+    "基准为历史参考表现，非验收；未根据其结果调参"
+  ]
+}
