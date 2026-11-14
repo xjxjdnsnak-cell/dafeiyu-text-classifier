@@ -1,0 +1,47 @@
+{
+  "record": "v9-candidate B 模型在 txt+sfx 编码下的 1% 预算阈值（完整精度）",
+  "threshold_fpr_1pct": 0.9387965748548248,
+  "value_provenance": {
+    "source": "audit_score_consistency.py 只读审计的 stdout（步骤 5 at_rederived_threshold），2026-11-14",
+    "transcription": "逐字抄录自审计输出（json.dumps float64 最短往返表示），未重新选择阈值",
+    "selection_rule": "select_threshold：验证集经验误拦 ≤1% 下最大化召回、再按 precision/F1、再取较大阈值（冻结协议规则）",
+    "derivation_model": "sfx 增强编码下的逐行分数（与 84.82% 评估同一分数向量）"
+  },
+  "evaluation_conditions": {
+    "model_sha256": "0d2ea96fdd6d92880fc8d58411f07b1300e629bb896f5df8de7fda2bce5f40bc",
+    "model_paths_identical": [
+      "experiments/sentence-structure-ablation-20261114/models/B/model.bin",
+      "experiments/sentence-structure-ablation-20261114/v9-candidate/model.bin"
+    ],
+    "encoding": "pre.encode(text, '', 'text') + ' ' + structure_tokens(text, pre) 的 sfx token",
+    "validation_split": "data-text-specialist-20261114-v8 processed/validation.csv（2,764 行；AI 955 / 人类 1,809）",
+    "benchmark_use": "无（前瞻基准未参与该阈值）"
+  },
+  "metrics_at_this_threshold": {
+    "recall": 0.8481675392670157,
+    "precision": 0.9782608695652174,
+    "f1": 0.9085810431856421,
+    "fpr": 0.009950248756218905,
+    "ordinary_nickname_recall": 0.7767857142857143,
+    "confusion_matrix": [
+      [
+        1791,
+        18
+      ],
+      [
+        145,
+        810
+      ]
+    ]
+  },
+  "related_thresholds": {
+    "wrong_threshold_that_produced_28pct": 0.9999811991413456,
+    "wrong_threshold_provenance": "前一轮标准编码（无 sfx）分数分布上的 select_threshold 结果；对 sfx 编码分数分布过高",
+    "fpr_2pct_sfx_encoding": 0.7445938325563725,
+    "fpr_2pct_note": "完整精度值由带落盘的审计脚本于 2026-11-14 复跑确认（确定性结果，与 transcript 中 6 位显示 0.744594 一致）"
+  },
+  "recorded_at": "2026-11-14T18:30:00+08:00",
+  "companion_fix": "audit_score_consistency.py 已更新为同时写 audit-score-consistency-results.json",
+  "threshold_fpr_2pct": 0.7445938325563725,
+  "verification": "audit_score_consistency.py 改造为落盘后复跑一次，stdout 的 1% 阈值与此前审计 transcript 值逐位一致（0.9387965748548248）"
+}

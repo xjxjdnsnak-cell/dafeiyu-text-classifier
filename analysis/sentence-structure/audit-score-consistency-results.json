@@ -1,0 +1,109 @@
+{
+  "generated_at": "2026-11-14T11:14:55+00:00",
+  "model_sha256": "0d2ea96fdd6d92880fc8d58411f07b1300e629bb896f5df8de7fda2bce5f40bc",
+  "sections": [
+    {
+      "step": "1_model_identity",
+      "model_B_sha256": "0d2ea96fdd6d92880fc8d58411f07b1300e629bb896f5df8de7fda2bce5f40bc",
+      "v9_model_sha256": "0d2ea96fdd6d92880fc8d58411f07b1300e629bb896f5df8de7fda2bce5f40bc",
+      "same_file": true
+    },
+    {
+      "step": "2_encoding",
+      "identical": true,
+      "rows": 2764
+    },
+    {
+      "step": "4_thresholds",
+      "ablation_recorded": 0.9999811991413456,
+      "v9_metadata": 0.9999811991413456,
+      "re_derived_select_threshold_1pct": 0.9387965748548248,
+      "re_derived_select_threshold_2pct": 0.7445938325563725
+    },
+    {
+      "step": "5_results_by_threshold",
+      "at_rederived_threshold": {
+        "threshold": 0.9387965748548248,
+        "recall": 0.8481675392670157,
+        "precision": 0.9782608695652174,
+        "f1": 0.9085810431856421,
+        "fpr": 0.009950248756218905,
+        "confusion": [
+          [
+            1791,
+            18
+          ],
+          [
+            145,
+            810
+          ]
+        ],
+        "ordinary_recall": 0.7767857142857143
+      },
+      "at_ablation_recorded_threshold": {
+        "threshold": 0.9999811991413456,
+        "recall": 0.2806282722513089,
+        "precision": 1.0,
+        "f1": 0.4382665576451349,
+        "fpr": 0.0,
+        "confusion": [
+          [
+            1809,
+            0
+          ],
+          [
+            687,
+            268
+          ]
+        ],
+        "ordinary_recall": 0.20535714285714285
+      },
+      "at_v9_metadata_threshold": {
+        "threshold": 0.9999811991413456,
+        "recall": 0.2806282722513089,
+        "precision": 1.0,
+        "f1": 0.4382665576451349,
+        "fpr": 0.0,
+        "confusion": [
+          [
+            1809,
+            0
+          ],
+          [
+            687,
+            268
+          ]
+        ],
+        "ordinary_recall": 0.20535714285714285
+      },
+      "at_rederived_threshold_2pct": {
+        "threshold": 0.7445938325563725,
+        "recall": 0.9141361256544502,
+        "precision": 0.9603960396039604,
+        "f1": 0.9366952789699571,
+        "fpr": 0.01990049751243781,
+        "confusion": [
+          [
+            1773,
+            36
+          ],
+          [
+            82,
+            873
+          ]
+        ],
+        "ordinary_recall": 0.8303571428571429
+      }
+    },
+    {
+      "step": "6_root_cause",
+      "same_model_file": true,
+      "same_encoding": true,
+      "same_per_comment_scores": true,
+      "different_thresholds": true,
+      "canonical_threshold_fpr_1pct": 0.9387965748548248,
+      "canonical_threshold_fpr_2pct": 0.7445938325563725,
+      "conclusion": "同一模型文件 + 同一编码 + 同一逐行分数 → 差异完全来自阈值选择。84.82% 评估用了 select_threshold 在 sfx 编码分数分布上选出的最优阈值；28.06% 评估沿用了前一轮（标准编码）的阈值，该阈值在新分数分布下过高。模型本身的识别能力没有变化。"
+    }
+  ]
+}
