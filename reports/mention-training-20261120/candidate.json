@@ -1,0 +1,71 @@
+{
+  "model_sha256": "4b4c8fdb38aa86b6bc8dce88080accb975664e1b253e3ea6d5f290f00338ecc9",
+  "threshold": 0.8800823463417595,
+  "threshold_source": "historical validation only, 1% negative-trigger cap",
+  "validation_fpr_cap": 0.01,
+  "selection_rule": "maximize recall under empirical FPR cap, then precision/F1, then larger threshold; score >= threshold",
+  "encoder": "MaskedBodyEncoder(txt+sfx)",
+  "pass_rule": "simple_invitation",
+  "dictionary_sha256": "7197c3211ddd98962b036cdf40324d1ea2bfaa12bd028e68faa70111a88e12a8",
+  "preprocess_sha256": "499cdc522aaeca863bab6be99f4f213925e5312c8a0299316e0b56fc74178bf8",
+  "training_input_sha256": "8e60c31949d154fb9c063cd3c830663242b1fdf2314cbe90dc5cd96bf71324ec",
+  "params": {
+    "dim": 32,
+    "bucket": 20000,
+    "epoch": 30,
+    "lr": 0.5,
+    "wordNgrams": 2,
+    "minn": 2,
+    "maxn": 4,
+    "minCount": 1,
+    "loss": "softmax",
+    "thread": 1,
+    "seed": 42,
+    "verbose": 0
+  },
+  "training_rows": 13007,
+  "training_composition": [
+    {
+      "group": "original",
+      "reason": "included",
+      "label": 0,
+      "count": 8530
+    },
+    {
+      "group": "original",
+      "reason": "included",
+      "label": 1,
+      "count": 4431
+    },
+    {
+      "group": "review",
+      "reason": "duplicate_input",
+      "label": 0,
+      "count": 2
+    },
+    {
+      "group": "review",
+      "reason": "included",
+      "label": 0,
+      "count": 43
+    },
+    {
+      "group": "review",
+      "reason": "included",
+      "label": 1,
+      "count": 3
+    },
+    {
+      "group": "review",
+      "reason": "protected_input",
+      "label": 0,
+      "count": 2
+    }
+  ],
+  "split_sha256": {
+    "train": "d69a7baf883af5a888b7ef4e9d91db30a7260184fd08c9d3efd804fcb90de56c",
+    "validation": "f55bca4ba28f14b5716da9231e891c828166659321fac6366e3085182ebef3cd",
+    "test": "887512cfacf8ee352f5fd6d63fb2a102302a1954f2e6a11ea905c1bcdb50b76c"
+  },
+  "reviewed_labels_sha256": "a4a3323ca12d28205326b90863565a3b2f44d0942ed5f9e9945bb8964a41f616"
+}
