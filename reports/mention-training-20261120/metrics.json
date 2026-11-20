@@ -1,0 +1,250 @@
+{
+  "validation": {
+    "all": {
+      "0": {
+        "rows": 1809,
+        "hits": {
+          "v8": 18,
+          "v9": 18,
+          "v9_mask_only": 15,
+          "v9_mask_trained": 18
+        }
+      },
+      "1": {
+        "rows": 955,
+        "hits": {
+          "v8": 782,
+          "v9": 810,
+          "v9_mask_only": 816,
+          "v9_mask_trained": 842
+        }
+      }
+    },
+    "ordinary": {
+      "0": {
+        "rows": 1776,
+        "hits": {
+          "v8": 17,
+          "v9": 17,
+          "v9_mask_only": 15,
+          "v9_mask_trained": 18
+        }
+      },
+      "1": {
+        "rows": 112,
+        "hits": {
+          "v8": 82,
+          "v9": 87,
+          "v9_mask_only": 87,
+          "v9_mask_trained": 88
+        }
+      }
+    },
+    "short": {
+      "0": {
+        "rows": 721,
+        "hits": {
+          "v8": 12,
+          "v9": 11,
+          "v9_mask_only": 7,
+          "v9_mask_trained": 8
+        }
+      },
+      "1": {
+        "rows": 68,
+        "hits": {
+          "v8": 33,
+          "v9": 31,
+          "v9_mask_only": 31,
+          "v9_mask_trained": 39
+        }
+      }
+    }
+  },
+  "test": {
+    "all": {
+      "0": {
+        "rows": 1684,
+        "hits": {
+          "v8": 11,
+          "v9": 4,
+          "v9_mask_only": 4,
+          "v9_mask_trained": 9
+        }
+      },
+      "1": {
+        "rows": 697,
+        "hits": {
+          "v8": 366,
+          "v9": 383,
+          "v9_mask_only": 392,
+          "v9_mask_trained": 423
+        }
+      }
+    },
+    "ordinary": {
+      "0": {
+        "rows": 1659,
+        "hits": {
+          "v8": 11,
+          "v9": 4,
+          "v9_mask_only": 4,
+          "v9_mask_trained": 9
+        }
+      },
+      "1": {
+        "rows": 122,
+        "hits": {
+          "v8": 45,
+          "v9": 54,
+          "v9_mask_only": 55,
+          "v9_mask_trained": 58
+        }
+      }
+    },
+    "short": {
+      "0": {
+        "rows": 1218,
+        "hits": {
+          "v8": 11,
+          "v9": 4,
+          "v9_mask_only": 4,
+          "v9_mask_trained": 8
+        }
+      },
+      "1": {
+        "rows": 149,
+        "hits": {
+          "v8": 42,
+          "v9": 35,
+          "v9_mask_only": 35,
+          "v9_mask_trained": 46
+        }
+      }
+    }
+  },
+  "development": {
+    "all": {
+      "0": {
+        "rows": 47,
+        "hits": {
+          "v8": 11,
+          "v9": 10,
+          "v9_mask_only": 0,
+          "v9_mask_trained": 0
+        }
+      },
+      "1": {
+        "rows": 3,
+        "hits": {
+          "v8": 2,
+          "v9": 2,
+          "v9_mask_only": 2,
+          "v9_mask_trained": 3
+        }
+      }
+    },
+    "ordinary": {
+      "0": {
+        "rows": 47,
+        "hits": {
+          "v8": 11,
+          "v9": 10,
+          "v9_mask_only": 0,
+          "v9_mask_trained": 0
+        }
+      },
+      "1": {
+        "rows": 3,
+        "hits": {
+          "v8": 2,
+          "v9": 2,
+          "v9_mask_only": 2,
+          "v9_mask_trained": 3
+        }
+      }
+    },
+    "short": {
+      "0": {
+        "rows": 47,
+        "hits": {
+          "v8": 11,
+          "v9": 10,
+          "v9_mask_only": 0,
+          "v9_mask_trained": 0
+        }
+      },
+      "1": {
+        "rows": 3,
+        "hits": {
+          "v8": 2,
+          "v9": 2,
+          "v9_mask_only": 2,
+          "v9_mask_trained": 3
+        }
+      }
+    }
+  },
+  "held_out": {
+    "all": {
+      "0": {
+        "rows": 20,
+        "hits": {
+          "v8": 6,
+          "v9": 5,
+          "v9_mask_only": 2,
+          "v9_mask_trained": 4
+        }
+      },
+      "1": {
+        "rows": 1,
+        "hits": {
+          "v8": 0,
+          "v9": 0,
+          "v9_mask_only": 0,
+          "v9_mask_trained": 0
+        }
+      }
+    },
+    "ordinary": {
+      "0": {
+        "rows": 20,
+        "hits": {
+          "v8": 6,
+          "v9": 5,
+          "v9_mask_only": 2,
+          "v9_mask_trained": 4
+        }
+      },
+      "1": {
+        "rows": 1,
+        "hits": {
+          "v8": 0,
+          "v9": 0,
+          "v9_mask_only": 0,
+          "v9_mask_trained": 0
+        }
+      }
+    },
+    "short": {
+      "0": {
+        "rows": 20,
+        "hits": {
+          "v8": 6,
+          "v9": 5,
+          "v9_mask_only": 2,
+          "v9_mask_trained": 4
+        }
+      },
+      "1": {
+        "rows": 1,
+        "hits": {
+          "v8": 0,
+          "v9": 0,
+          "v9_mask_only": 0,
+          "v9_mask_trained": 0
+        }
+      }
+    }
+  }
+}
