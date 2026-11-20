@@ -32,6 +32,19 @@ print(result["ai_style_score"], result["predicted_label"])
 
 注意：模型入口必须**先排除纯 @ 无正文的输入**（`bili_ai.preprocess.is_mention_only`），这类输入不给 AI 判断；评分前需按 `assets/preprocess.json` 与冻结词典（`assets/jieba.dict.txt`）做同样预处理。灰区名单 `policy/human_exclusion_policy.json` 用于**训练侧人类样本排除**，不是线上判 AI 的规则。
 
+### v9 正文候选 · 遮蔽被提及的昵称
+
+在仓库根目录使用安装了 `code/requirements.txt` 的 Python 运行：
+
+```shell
+python code/predict_masked_v9.py predict --text "回复 @小蓝 :这条评论保留正文"
+python code/predict_masked_v9.py batch --input comments.csv --output predictions.jsonl
+```
+
+批量输入为含 `text` 字段的 CSV 或 JSONL，按输入顺序输出。Python 调用方可将 `code` 加入模块搜索路径，使用 `from predict_masked_v9 import MaskedV9Predictor`，再调用 `predict_one(text=...)` 或 `predict_many(rows)`。
+
+候选在原文上将匹配到的每个 `@昵称` 替换为 `@某人`，然后计算冻结的 v9 正文词元和句式特征。沿用实验中的昵称边界与 24 字符匹配上限。空正文和仅提及的评论返回 `insufficient_input`。权重来自 `models/sentence-structure/B/model.bin`，触发阈值为 `0.9387965748548248`。
+
 ## 目录
 
 ```
