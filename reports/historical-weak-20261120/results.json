@@ -1,0 +1,234 @@
+{
+  "validation": {
+    "positive": {
+      "rows": 955,
+      "v8": {
+        "hits": 782
+      },
+      "v8.1": {
+        "hits": 743,
+        "added": 8,
+        "lost": 47
+      },
+      "v9": {
+        "hits": 810
+      },
+      "v9.1": {
+        "hits": 795,
+        "added": 8,
+        "lost": 23
+      }
+    },
+    "negative": {
+      "rows": 1809,
+      "v8": {
+        "hits": 18
+      },
+      "v8.1": {
+        "hits": 18,
+        "added": 3,
+        "lost": 3
+      },
+      "v9": {
+        "hits": 18
+      },
+      "v9.1": {
+        "hits": 18,
+        "added": 1,
+        "lost": 1
+      }
+    },
+    "ordinary_positive": {
+      "rows": 112,
+      "v8": {
+        "hits": 82
+      },
+      "v8.1": {
+        "hits": 76,
+        "added": 1,
+        "lost": 7
+      },
+      "v9": {
+        "hits": 87
+      },
+      "v9.1": {
+        "hits": 85,
+        "added": 2,
+        "lost": 4
+      }
+    },
+    "short_positive": {
+      "rows": 68,
+      "v8": {
+        "hits": 33
+      },
+      "v8.1": {
+        "hits": 29,
+        "added": 1,
+        "lost": 5
+      },
+      "v9": {
+        "hits": 31
+      },
+      "v9.1": {
+        "hits": 29,
+        "added": 2,
+        "lost": 4
+      }
+    },
+    "historical_existing": {
+      "rows": 952,
+      "v8": {
+        "hits": 1
+      },
+      "v8.1": {
+        "hits": 0,
+        "added": 0,
+        "lost": 1
+      },
+      "v9": {
+        "hits": 1
+      },
+      "v9.1": {
+        "hits": 1,
+        "added": 0,
+        "lost": 0
+      }
+    },
+    "human_evidence": {
+      "rows": 419,
+      "v8": {
+        "hits": 2
+      },
+      "v8.1": {
+        "hits": 3,
+        "added": 2,
+        "lost": 1
+      },
+      "v9": {
+        "hits": 1
+      },
+      "v9.1": {
+        "hits": 1,
+        "added": 0,
+        "lost": 0
+      }
+    }
+  },
+  "test": {
+    "positive": {
+      "rows": 697,
+      "v8": {
+        "hits": 366
+      },
+      "v8.1": {
+        "hits": 306,
+        "added": 9,
+        "lost": 69
+      },
+      "v9": {
+        "hits": 383
+      },
+      "v9.1": {
+        "hits": 339,
+        "added": 7,
+        "lost": 51
+      }
+    },
+    "negative": {
+      "rows": 1684,
+      "v8": {
+        "hits": 11
+      },
+      "v8.1": {
+        "hits": 8,
+        "added": 1,
+        "lost": 4
+      },
+      "v9": {
+        "hits": 4
+      },
+      "v9.1": {
+        "hits": 4,
+        "added": 1,
+        "lost": 1
+      }
+    },
+    "ordinary_positive": {
+      "rows": 122,
+      "v8": {
+        "hits": 45
+      },
+      "v8.1": {
+        "hits": 36,
+        "added": 1,
+        "lost": 10
+      },
+      "v9": {
+        "hits": 54
+      },
+      "v9.1": {
+        "hits": 42,
+        "added": 0,
+        "lost": 12
+      }
+    },
+    "short_positive": {
+      "rows": 149,
+      "v8": {
+        "hits": 42
+      },
+      "v8.1": {
+        "hits": 33,
+        "added": 4,
+        "lost": 13
+      },
+      "v9": {
+        "hits": 35
+      },
+      "v9.1": {
+        "hits": 27,
+        "added": 2,
+        "lost": 10
+      }
+    },
+    "historical_existing": {
+      "rows": 1665,
+      "v8": {
+        "hits": 11
+      },
+      "v8.1": {
+        "hits": 8,
+        "added": 1,
+        "lost": 4
+      },
+      "v9": {
+        "hits": 4
+      },
+      "v9.1": {
+        "hits": 4,
+        "added": 1,
+        "lost": 1
+      }
+    },
+    "human_evidence": {
+      "rows": 19,
+      "v8": {
+        "hits": 0
+      },
+      "v8.1": {
+        "hits": 0,
+        "added": 0,
+        "lost": 0
+      },
+      "v9": {
+        "hits": 0
+      },
+      "v9.1": {
+        "hits": 0,
+        "added": 0,
+        "lost": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "models": {
+    "v8": {
+      "threshold": 0.9700783414714084,
+      "model_sha256": "6e60c7abf39ec47ecd1d6d0c51bf7155a6f80aa221aacf2088650063e60101ed"
+    },
+    "v9": {
+      "threshold": 0.9387965748548248,
+      "model_sha256": "0d2ea96fdd6d92880fc8d58411f07b1300e629bb896f5df8de7fda2bce5f40bc"
+    },
+    "v8.1": {
+      "threshold": 0.9928955662241766,
+      "encoder": "txt",
+      "model_sha256": "3a791fa780897334ebcb31655907f0051834d2b260a4fd8a3f56247d7e1509f5",
+      "training_input_sha256": "36c78d95855d275c6cd27cfd0781f8a0eb2b393802851124b7495fdcc477a1ce",
+      "validation_selection": {
+        "threshold": 0.9928955662241766,
+        "max_validation_fpr": 0.01,
+        "selection_rule": "maximize recall under empirical FPR cap, then precision/F1, then larger threshold; score >= threshold",
+        "metrics": {
+          "precision": 0.9763469119579501,
+          "recall": 0.7780104712041885,
+          "f1": 0.865967365967366,
+          "fpr": 0.009950248756218905,
+          "fpr_wilson_95": [
+            0.006303234389294134,
+            0.015674119795120945
+          ],
+          "confusion_matrix": [
+            [
+              1791,
+              18
+            ],
+            [
+              212,
+              743
+            ]
+          ],
+          "support": {
+            "normal": 1809,
+            "ai_style": 955
+          },
+          "predicted_positive": 761,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "degenerate_no_detections": false,
+        "caution": "验证集经验 FPR 上限不是总体误判率保证；小样本必须结合区间与人工复核。"
+      }
+    },
+    "v9.1": {
+      "threshold": 0.9742310527511897,
+      "encoder": "txt+sfx",
+      "model_sha256": "84b12ad54c7327f15a14dad3a1c61eb952bd73ebf3f6c226eca74a218b4da4af",
+      "training_input_sha256": "2860e8a84665bbf8f7e525df9f85494eaa4a9fb10613d844bc00c2007267f60b",
+      "validation_selection": {
+        "threshold": 0.9742310527511897,
+        "max_validation_fpr": 0.01,
+        "selection_rule": "maximize recall under empirical FPR cap, then precision/F1, then larger threshold; score >= threshold",
+        "metrics": {
+          "precision": 0.977859778597786,
+          "recall": 0.8324607329842932,
+          "f1": 0.8993212669683257,
+          "fpr": 0.009950248756218905,
+          "fpr_wilson_95": [
+            0.006303234389294134,
+            0.015674119795120945
+          ],
+          "confusion_matrix": [
+            [
+              1791,
+              18
+            ],
+            [
+              160,
+              795
+            ]
+          ],
+          "support": {
+            "normal": 1809,
+            "ai_style": 955
+          },
+          "predicted_positive": 813,
+          "abstentions": 0,
+          "coverage": 1.0
+        },
+        "degenerate_no_detections": false,
+        "caution": "验证集经验 FPR 上限不是总体误判率保证；小样本必须结合区间与人工复核。"
+      }
+    }
+  },
+  "training": {
+    "available": {
+      "human_evidence": 1279,
+      "historical_existing": 5025,
+      "positive": 4431,
+      "weak_low_rule": 2223,
+      "unresolved": 3,
+      "historical_new": 5172
+    },
+    "retained": {
+      "human_evidence": 1279,
+      "historical_existing": 5025,
+      "positive": 4431,
+      "weak_low_rule": 1093,
+      "historical_new": 5172
+    },
+    "total_retained": 17000,
+    "seed": 42,
+    "weak_keep_probability": 0.5,
+    "new_exclusions": {
+      "normalized_text": 111,
+      "uid": 14,
+      "associated_uid": 1
+    },
+    "new_videos": 10
+  },
+  "params": {
+    "dim": 32,
+    "bucket": 20000,
+    "epoch": 30,
+    "lr": 0.5,
+    "wordNgrams": 2,
+    "minn": 2,
+    "maxn": 4,
+    "minCount": 1,
+    "loss": "softmax",
+    "thread": 1,
+    "seed": 42,
+    "verbose": 0
+  },
+  "cutoff_exclusive": "2026-10-01T00:00:00+08:00",
+  "validation_negative_budget": 0.01,
+  "split_sha256": {
+    "train": "d69a7baf883af5a888b7ef4e9d91db30a7260184fd08c9d3efd804fcb90de56c",
+    "validation": "f55bca4ba28f14b5716da9231e891c828166659321fac6366e3085182ebef3cd",
+    "test": "887512cfacf8ee352f5fd6d63fb2a102302a1954f2e6a11ea905c1bcdb50b76c"
+  },
+  "ledger_sha256": "3f245b2e5e483b58211c95ffe0d131ac536dc33fefd59ba3e6c9793e3d109b8d"
+}
