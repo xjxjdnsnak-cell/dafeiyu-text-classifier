@@ -1,0 +1,202 @@
+{
+  "validation": {
+    "all": {
+      "0": {
+        "rows": 1809,
+        "parent": 18,
+        "candidate": 18,
+        "added": 1,
+        "lost": 1
+      },
+      "1": {
+        "rows": 955,
+        "parent": 842,
+        "candidate": 839,
+        "added": 1,
+        "lost": 4
+      }
+    },
+    "ordinary": {
+      "0": {
+        "rows": 1776,
+        "parent": 18,
+        "candidate": 17,
+        "added": 0,
+        "lost": 1
+      },
+      "1": {
+        "rows": 112,
+        "parent": 88,
+        "candidate": 87,
+        "added": 0,
+        "lost": 1
+      }
+    },
+    "short": {
+      "0": {
+        "rows": 721,
+        "parent": 8,
+        "candidate": 8,
+        "added": 0,
+        "lost": 0
+      },
+      "1": {
+        "rows": 68,
+        "parent": 39,
+        "candidate": 37,
+        "added": 0,
+        "lost": 2
+      }
+    }
+  },
+  "test": {
+    "all": {
+      "0": {
+        "rows": 1684,
+        "parent": 9,
+        "candidate": 8,
+        "added": 0,
+        "lost": 1
+      },
+      "1": {
+        "rows": 697,
+        "parent": 423,
+        "candidate": 418,
+        "added": 2,
+        "lost": 7
+      }
+    },
+    "ordinary": {
+      "0": {
+        "rows": 1659,
+        "parent": 9,
+        "candidate": 8,
+        "added": 0,
+        "lost": 1
+      },
+      "1": {
+        "rows": 122,
+        "parent": 58,
+        "candidate": 57,
+        "added": 0,
+        "lost": 1
+      }
+    },
+    "short": {
+      "0": {
+        "rows": 1218,
+        "parent": 8,
+        "candidate": 7,
+        "added": 0,
+        "lost": 1
+      },
+      "1": {
+        "rows": 149,
+        "parent": 46,
+        "candidate": 44,
+        "added": 1,
+        "lost": 3
+      }
+    }
+  },
+  "development": {
+    "all": {
+      "0": {
+        "rows": 47,
+        "parent": 0,
+        "candidate": 0,
+        "added": 0,
+        "lost": 0
+      },
+      "1": {
+        "rows": 3,
+        "parent": 3,
+        "candidate": 3,
+        "added": 0,
+        "lost": 0
+      }
+    },
+    "ordinary": {
+      "0": {
+        "rows": 47,
+        "parent": 0,
+        "candidate": 0,
+        "added": 0,
+        "lost": 0
+      },
+      "1": {
+        "rows": 3,
+        "parent": 3,
+        "candidate": 3,
+        "added": 0,
+        "lost": 0
+      }
+    },
+    "short": {
+      "0": {
+        "rows": 47,
+        "parent": 0,
+        "candidate": 0,
+        "added": 0,
+        "lost": 0
+      },
+      "1": {
+        "rows": 3,
+        "parent": 3,
+        "candidate": 3,
+        "added": 0,
+        "lost": 0
+      }
+    }
+  },
+  "held_out": {
+    "all": {
+      "0": {
+        "rows": 20,
+        "parent": 4,
+        "candidate": 4,
+        "added": 0,
+        "lost": 0
+      },
+      "1": {
+        "rows": 1,
+        "parent": 0,
+        "candidate": 0,
+        "added": 0,
+        "lost": 0
+      }
+    },
+    "ordinary": {
+      "0": {
+        "rows": 20,
+        "parent": 4,
+        "candidate": 4,
+        "added": 0,
+        "lost": 0
+      },
+      "1": {
+        "rows": 1,
+        "parent": 0,
+        "candidate": 0,
+        "added": 0,
+        "lost": 0
+      }
+    },
+    "short": {
+      "0": {
+        "rows": 20,
+        "parent": 4,
+        "candidate": 4,
+        "added": 0,
+        "lost": 0
+      },
+      "1": {
+        "rows": 1,
+        "parent": 0,
+        "candidate": 0,
+        "added": 0,
+        "lost": 0
+      }
+    }
+  }
+}

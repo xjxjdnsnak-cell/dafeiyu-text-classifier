@@ -1,0 +1,68 @@
+{
+  "source_rows": 19317,
+  "source_hash": "4f89f31ffb980334b21cacc173dec367e86b8d86f5421c78fd30abf89d678837",
+  "rule_hash": "6dde9149a5f27359211ea40cb54de9b09a442be98c44efff0e694f9221436f4d",
+  "exports": {
+    "out/collector-expand-20261112/export/all_scored.jsonl": "bed29aeded4f4ab2a846afc986536c01fce709c56dc65fc535569660961bdf62",
+    "out/collector-expand-topics-20261114/export/all_scored.jsonl": "d86628aa1f17e06c21cbf119728ece7e9959f572a4efa9562aac105ae92bd19f",
+    "out/collector-newtopics-20261112/export/all_scored.jsonl": "0f852840aa0189b1d9eac1094f4778876f5ba140a2b63fac0897287d128ac9bd",
+    "out/dsh-video-20261114/export/ai-only-ge30.jsonl": "418a7d6a416b81929acdc9444ad052e6cd530fb9a6d140262166d0237390de11",
+    "out/text-specialist-20261113/collection/export/all_scored.jsonl": "55d79fc208b040dea67cc00ec7e07d0e5b42f857bce5ae35dde82a0c34da856d"
+  },
+  "observations": 18933,
+  "observations_with_exact_replay": 18933,
+  "groups": [
+    {
+      "label": "0",
+      "source": "preserved_existing_label",
+      "flag": "no_source",
+      "count": 8
+    },
+    {
+      "label": "0",
+      "source": "preserved_existing_label",
+      "flag": "same_side",
+      "count": 6806
+    },
+    {
+      "label": "0",
+      "source": "weak_rule_human_new_collection",
+      "flag": "same_side",
+      "count": 6105
+    },
+    {
+      "label": "1",
+      "source": "preserved_existing_label",
+      "flag": "falls_below_30",
+      "count": 4
+    },
+    {
+      "label": "1",
+      "source": "preserved_existing_label",
+      "flag": "no_source",
+      "count": 448
+    },
+    {
+      "label": "1",
+      "source": "preserved_existing_label",
+      "flag": "same_side",
+      "count": 3951
+    },
+    {
+      "label": "1",
+      "source": "user_rule_score_ge_30",
+      "flag": "falls_below_30",
+      "count": 50
+    },
+    {
+      "label": "1",
+      "source": "user_rule_score_ge_30",
+      "flag": "same_side",
+      "count": 1945
+    }
+  ],
+  "positive_training_rows_with_a_flip": {
+    "set_aside_in_candidate": 39,
+    "keep_inherited_or_other_evidence": 3
+  }
+}
