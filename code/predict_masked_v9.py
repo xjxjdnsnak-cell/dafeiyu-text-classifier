@@ -20,6 +20,7 @@ from bili_ai.model import Predictor
 from bili_ai.preprocess import ASSETS
 from structure_features import encode_structure_augmented
 from text_policy import is_mention_only
+from direct_request import is_direct_request
 
 MODEL = ROOT / "models" / "sentence-structure" / "B" / "model.bin"
 MODEL_SHA256 = "0d2ea96fdd6d92880fc8d58411f07b1300e629bb896f5df8de7fda2bce5f40bc"
@@ -47,11 +48,26 @@ class MaskedBodyEncoder:
 class MaskedV9Predictor(Predictor):
     """Single and batch inference share the same masking and scoring path."""
 
-    def __init__(self):
+    def __init__(self, *, protect_direct_requests=False):
         if sha256(MODEL) != MODEL_SHA256:
             raise ValueError("v9 模型 SHA256 与冻结记录不符")
         super().__init__(MODEL, mode="text", threshold=THRESHOLD, assets=ASSETS)
         self.pre = MaskedBodyEncoder(self.pre)
+        self.protect_direct_requests = protect_direct_requests
+
+    def predict_many(self, rows):
+        if not self.protect_direct_requests:
+            return super().predict_many(rows)
+        # Keep name boundaries until after the policy decision. A protected row
+        # uses the parent's unscored path, preserving row order and UID handling.
+        protected = [is_direct_request(row.get("text")) for row in rows]
+        model_rows = [dict(row, text=None) if protect else row
+                      for row, protect in zip(rows, protected, strict=True)]
+        results = super().predict_many(model_rows)
+        for result, protect in zip(results, protected, strict=True):
+            if protect and result["reason"] == "insufficient_input":
+                result["reason"] = "direct_request"
+        return results
 
 
 def main():
@@ -62,8 +78,11 @@ def main():
     batch = commands.add_parser("batch")
     batch.add_argument("--input", type=Path, required=True, help="包含 text 字段的 CSV 或 JSONL")
     batch.add_argument("--output", type=Path, required=True, help="逐行预测 JSONL")
+    for command in (single, batch):
+        command.add_argument("--protect-direct-requests", action="store_true",
+                             help="启用候选策略，放行符合短句模板的点名请求")
     args = parser.parse_args()
-    predictor = MaskedV9Predictor()
+    predictor = MaskedV9Predictor(protect_direct_requests=args.protect_direct_requests)
     if args.command == "predict":
         result = predictor.predict_one(text=args.text)
     else:

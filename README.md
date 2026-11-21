@@ -45,6 +45,14 @@ python code/predict_masked_v9.py batch --input comments.csv --output predictions
 
 候选在原文上将匹配到的每个 `@昵称` 替换为 `@某人`，然后计算冻结的 v9 正文词元和句式特征。沿用实验中的昵称边界与 24 字符匹配上限。空正文和仅提及的评论返回 `insufficient_input`。权重来自 `models/sentence-structure/B/model.bin`，触发阈值为 `0.9387965748548248`。
 
+点名请求保护是可选策略。单条和批量命令均可加 `--protect-direct-requests`，Python 入口为 `MaskedV9Predictor(protect_direct_requests=True)`。例如：
+
+```sh
+python code/predict_masked_v9.py predict --protect-direct-requests --text "回复 @示例：能帮我装这个吗？"
+```
+
+候选先在原文上识别开头的称呼和分隔符，再检查剩余短句。去掉句末标点后的请求须在 20 个 Unicode 码点以内，并完整匹配冻结的请求模板。命中后返回 `blocked=false`、`reason="direct_request"`，分数及标签均为空，作者身份保留未知。其他评论沿用原遮名入口。
+
 ## 目录
 
 ```
