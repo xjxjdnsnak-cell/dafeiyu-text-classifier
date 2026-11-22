@@ -37,6 +37,10 @@ def packet(folder):
 
 
 def read_sheet(path, folder, who):
+    if path.suffix.lower() == ".json":
+        from web_packet import read_web
+
+        return read_web(path, folder, who)
     from openpyxl import load_workbook
 
     key = read(folder / f"key-{who}.json")

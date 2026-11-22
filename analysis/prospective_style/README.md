@@ -38,10 +38,13 @@ python "$p/qwen.py" $private
 & ./fasttext-classifier/.venv/Scripts/python.exe "$p/score.py" . $private (Get-Command python).Source
 & ./fasttext-classifier/.venv/Scripts/python.exe "$p/audit.py" . $private
 python "$p/review.py" packet $private
+python "$p/web_packet.py" $private $output
 node "$p/workbooks.mjs" $private $output
 python "$p/review.py" evaluate $private --a $reviewA --b $reviewB
 python "$p/review.py" evaluate $private --a $reviewA --b $reviewB --adjudicated $decisions
 python -m unittest discover -s $p -p test_review.py
 ```
+
+离线网页和 Excel 共用同一份盲评编号与正文。标注者只打开自己的 HTML，在浏览器中逐条选择三项判断。进度保存在当前浏览器，可导出 JSON 备份并在同一标注者的页面恢复。全部填完后导出的 JSON 可直接作为 evaluate 的 A 或 B 输入，支持与 Excel 混合回收。
 
 采集与 fastText 复用项目环境。RoBERTa、TinyBERT 使用本机 PyTorch 和 Transformers。将固定版本的原始配置、词表、权重和带 LFS SHA256 的 Hugging Face 模型 API 元数据 source.json 存放于私有目录 roberta-source 下，fit 会核验原始权重。工作簿生成需能解析 @oai/artifact-tool 的 Node 环境，回读用 openpyxl。已发出的工作簿拒绝覆盖，返回的工作簿保留原样。首次 evaluate 产生私有分歧表，裁决后传入完成的副本。真实评论、账号、预测明细、盲评表及模型权重均在本地。公开研究仓库仅包含脚本、方案、合成探针和汇总。
