@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>标注者 __RATER__ · 中文短评独立盲评</title>
+<style>
+*{box-sizing:border-box}
+:root{--ink:#192f32;--quiet:#536666;--line:#d8e1dc;--teal:#155c53;--wash:#e6f2e9;--paper:#fffefa}
+body{margin:0;background:#f4f5ef;color:var(--ink);font:15px/1.55 "DM Sans","Microsoft YaHei","PingFang SC",sans-serif}
+button,input,summary{font:inherit}button,summary,label[for=load]{cursor:pointer}button{color:inherit;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 13px}button:disabled{opacity:.4;cursor:default}
+button:hover:enabled,summary:hover,label[for=load]:hover{color:var(--teal)}button:focus-visible,summary:focus-visible,input:focus-visible,label:has(input:focus-visible){outline:3px solid #d7a93b;outline-offset:2px}
+header{background:#143c3c;color:#fff;border-bottom:4px solid #b4cd9b}.top,main{max-width:1230px;margin:auto;padding:0 32px}.top{min-height:67px;display:flex;align-items:center;justify-content:space-between;gap:10px}.brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:19px}.brand i{width:23px;height:21px;border:2px solid #c1d8b1;border-radius:5px;position:relative}.brand i:after{content:"";position:absolute;width:8px;height:2px;background:#c1d8b1;left:5px;top:6px;box-shadow:0 4px 0 #c1d8b1}.who{color:#deebdb;font-size:14px}
+main{padding-top:24px;padding-bottom:36px}.summary{display:flex;align-items:center;gap:28px;justify-content:space-between;margin-bottom:18px}.progressbox{min-width:190px;max-width:340px;flex:1}.progressline{display:flex;justify-content:space-between;font-size:13px;color:var(--quiet);margin-bottom:6px}.progressline b{font-variant-numeric:tabular-nums;color:var(--ink)}progress{display:block;width:100%;height:6px;border:0;border-radius:9px;overflow:hidden;background:#dce4d9}progress::-webkit-progress-bar{background:#dce4d9}progress::-webkit-progress-value{background:var(--teal)}progress::-moz-progress-bar{background:var(--teal)}
+.tools{display:flex;gap:8px;align-items:center}.tools button,.upload{font-size:14px}.upload{padding:8px 10px;color:var(--quiet)}.solid{background:var(--teal);border-color:var(--teal);color:white;font-weight:600}.solid:hover:enabled{color:white;background:#104c45}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:22px;align-items:start}.side,.card{border:1px solid var(--line);border-radius:15px;background:var(--paper);overflow:hidden}.side summary{padding:17px 18px;font-weight:bold;list-style-position:inside}.side summary span{float:right;color:var(--quiet);font-weight:400;font-size:13px}.filter{padding:0 12px 12px}.filter input{width:100%;border:1px solid #c7d5cb;border-radius:8px;padding:8px 10px;font-size:14px;background:white}.filters{display:flex;gap:6px;margin-top:9px}.filters button{font-size:13px;padding:4px 10px;border-radius:20px;background:transparent}.filters [aria-pressed=true]{color:var(--teal);background:var(--wash);border-color:#90b5a6}.entries{overflow:auto;max-height:min(57vh,560px);border-top:1px solid var(--line)}.entry{width:100%;display:block;text-align:left;border:0;border-bottom:1px solid #e6eae4;border-radius:0;padding:9px 16px;background:transparent}.entry[aria-current=true]{background:var(--wash);box-shadow:inset 3px 0 var(--teal)}.entry small{display:block;font:12px/1.4 "Consolas",monospace;color:var(--quiet)}.entry span{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:14px}.empty{padding:15px;color:var(--quiet)}
+.card{padding:24px 30px 18px;box-shadow:0 4px 14px #233b3206}.meta{display:flex;gap:8px;align-items:center;color:var(--quiet);font-size:13px}.code{font-family:Consolas,monospace;color:var(--teal);font-size:14px}.comment{margin:15px 0 24px;font-size:clamp(21px,2.1vw,29px);font-weight:550;line-height:1.65;overflow-wrap:anywhere;white-space:pre-wrap;letter-spacing:.01em}.bar{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding-top:14px}.bar h2{font-size:18px;margin:0}.link{border:none;background:transparent;color:var(--teal);text-decoration:underline;text-underline-offset:4px;padding:5px}.guide{background:#f1f4ec;margin:8px 0;padding:12px 16px;border-radius:8px;color:#3c504b;font-size:14px}.guide p{margin:0 0 5px}.guide p:last-child{margin:0}
+fieldset{min-width:0;border:0;padding:0;margin:13px 0 15px}legend{padding:0;margin-bottom:7px;font-size:14px;font-weight:650}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.choice{display:flex;align-items:center;gap:8px;justify-content:center;cursor:pointer;border:1px solid #ccd7cf;border-radius:8px;background:white;padding:9px 4px;min-height:42px}.choice:has(input:checked){background:var(--wash);border-color:var(--teal);color:var(--teal);font-weight:bold}.choice input{margin:0;width:14px;height:14px;accent-color:var(--teal)}.foot{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:14px}.status{font-size:13px;color:var(--quiet)}.nav{display:flex;gap:8px}.notice{color:#764e0c;margin:.4rem 0;font-size:14px}
+@media(max-width:850px){.top,main{padding-left:18px;padding-right:18px}.layout{grid-template-columns:215px minmax(0,1fr);gap:12px}.card{padding:18px}.choice{font-size:14px}}
+@media(max-width:680px){.top{min-height:52px}.brand{font-size:17px}.top,main{padding-left:12px;padding-right:12px}main{padding-top:14px}.summary{gap:12px;margin-bottom:12px}.progressbox{min-width:90px}.tools{gap:3px}.tools button,.upload{font-size:13px;padding:7px}.layout{display:block}.side{margin-bottom:10px}.side summary{padding:10px 13px}.entries{max-height:32vh}.card{padding:16px 14px}.comment{margin:12px 0 18px;font-size:21px}.choices{gap:5px}.choice{font-size:13px;gap:4px}.foot{align-items:flex-start;flex-wrap:wrap}.nav{margin-left:auto}.status{align-self:center}.who{font-size:13px}}
+</style>
+<header><div class="top"><div class="brand"><i aria-hidden="true"></i>中文短评独立盲评</div><div class="who">标注者 __RATER__</div></div></header>
+<main>
+<div class="summary"><div class="progressbox"><div class="progressline"><span>已完成</span><b id="count"></b></div><progress id="progress" aria-label="已完成条数"></progress></div>
+<div class="tools"><button id="importBtn">导入进度</button><input type="file" id="load" accept=".json,application/json" hidden><button id="exportBtn" class="solid">导出进度</button></div></div>
+<p id="notice" class="notice" role="status" hidden></p>
+<div class="layout"><details class="side" id="side"><summary>评论目录 <span id="total"></span></summary>
+<div class="filter"><input id="search" type="search" placeholder="搜索编号或评论" aria-label="搜索编号或评论"><div class="filters"><button id="all">全部</button><button id="todo">未完成</button></div></div><nav class="entries" id="entries" aria-label="评论列表"></nav></details>
+<article class="card"><div class="meta"><b id="code" class="code"></b><span>·</span><span id="position"></span></div><h1 class="comment" id="comment"></h1>
+<div class="bar"><h2>标注判断</h2><button class="link" id="help" aria-expanded="false" aria-controls="guide">标注说明</button></div>
+<div id="guide" class="guide" hidden><p><b>文本风格</b>　根据正文判断更像日常个人交流还是生成式回答。长短、礼貌程度或列表格式均不足以单独定类。</p><p><b>对话意图</b>　请对方回答或行动属于请求。转述别人的问题、汇报已做的事属于非请求。</p><p><b>推广表达</b>　明确引流、招揽或号召关注、下载、购买时选有推广。只讨论产品或询问操作可选无推广。</p><p>三项分别判断，证据不足时选“不确定”。请独立填写并交回导出的结果文件。</p></div>
+<div id="fields"></div><div class="foot"><span id="status" class="status" role="status"></span><div class="nav"><button id="prev">上一条</button><button id="next" class="solid">下一条</button></div></div></article></div></main>
+<script id="data" type="application/json">__PACKET__</script>
+<script>
+"use strict";
+const config = JSON.parse(document.getElementById("data").textContent);
+const {packet, who, choices, fingerprint, format} = config;
+const ids = new Set(packet.map(row => row[0]));
+const $ = id => document.getElementById(id);
+const storageKey = format + ":" + who + ":" + fingerprint;
+let labels = {}, index = 0, onlyTodo = false, storageOK = true;
+const complete = code => choices.every((group, i) => group.includes(labels[code]?.[i]));
+const reviewed = () => Object.keys(labels).filter(complete).length;
+function notify(message) { $("notice").hidden = !message; $("notice").textContent = message; }
+function state() { return {format, who, fingerprint, labels, index}; }
+function validate(data) {
+  if (!data || data.format !== format || data.who !== who || data.fingerprint !== fingerprint || !data.labels || typeof data.labels !== "object" || Array.isArray(data.labels)) throw Error("请选择属于本页标注者的进度文件。");
+  for (const [code, row] of Object.entries(data.labels)) {
+    if (!ids.has(code) || !Array.isArray(row) || row.length !== 3 || !row.every((v,i) => v === null || choices[i].includes(v))) throw Error("文件中有无法识别的编号或选项。");
+  }
+  if (!Number.isInteger(data.index) || data.index < 0 || data.index >= packet.length) throw Error("文件中的评论位置无效。");
+}
+function restore(data) { validate(data); labels = data.labels; index = data.index; }
+function persist() {
+  try { localStorage.setItem(storageKey, JSON.stringify(state())); storageOK = true; }
+  catch { storageOK = false; notify("浏览器未能保存进度，请在关闭网页前导出。"); }
+}
+try { const saved = localStorage.getItem(storageKey); if (saved) restore(JSON.parse(saved)); }
+catch { storageOK = false; notify("本地进度无法读取，可导入备份或从当前页开始。"); }
+$("side").open = !matchMedia("(max-width:680px)").matches;
+$("total").textContent = packet.length + " 条";
+$("progress").max = packet.length;
+function list() {
+  const query = $("search").value.trim().toLowerCase();
+  const fragment = document.createDocumentFragment();
+  packet.forEach(([code,text], i) => {
+    if ((onlyTodo && complete(code)) || !(code + " " + text).toLowerCase().includes(query)) return;
+    const btn = document.createElement("button"), small = document.createElement("small"), body = document.createElement("span");
+    btn.className = "entry"; btn.dataset.index = i; btn.setAttribute("aria-current", i === index);
+    small.textContent = code + (complete(code) ? "　✓" : ""); body.textContent = text;
+    btn.append(small,body); fragment.append(btn);
+  });
+  if (!fragment.childNodes.length) { const p = document.createElement("p"); p.className = "empty"; p.textContent = onlyTodo && !query ? "全部已完成" : "没有匹配的评论"; fragment.append(p); }
+  $("entries").replaceChildren(fragment);
+  $("all").setAttribute("aria-pressed", !onlyTodo); $("todo").setAttribute("aria-pressed", onlyTodo);
+}
+const titles = ["文本风格","对话意图","推广表达"];
+choices.forEach((group, dim) => {
+  const field = document.createElement("fieldset"), legend = document.createElement("legend"), options = document.createElement("div");
+  legend.textContent = titles[dim]; options.className = "choices";
+  group.forEach(value => {
+    const label = document.createElement("label"), input = document.createElement("input");
+    label.className = "choice"; input.type = "radio"; input.name = "dim"+dim; input.value = value;
+    input.onchange = () => {
+      const code = packet[index][0]; (labels[code] ??= [null,null,null])[dim] = value;
+      persist(); render(false);
+    };
+    label.append(input, document.createTextNode(value)); options.append(label);
+  });
+  field.append(legend, options); $("fields").append(field);
+});
+function render(reveal) {
+  const [code,text] = packet[index], n = reviewed();
+  $("code").textContent = code; $("comment").textContent = text; $("position").textContent = "第 " + (index+1) + " 条 / 共 " + packet.length + " 条";
+  $("count").textContent = n + " / " + packet.length; $("progress").value = n;
+  choices.forEach((_,d) => document.getElementsByName("dim"+d).forEach(el => { el.checked = el.value === labels[code]?.[d]; }));
+  $("status").textContent = (labels[code]?.filter(Boolean).length || 0) + " / 3 项已选" + (storageOK && labels[code] ? " · 已保存" : "");
+  $("prev").disabled = index === 0; $("next").disabled = index === packet.length-1;
+  $("exportBtn").textContent = n === packet.length ? "导出结果" : "导出进度";
+  list();
+  if (reveal && $("side").open) {
+    const active = $("entries").querySelector('[aria-current="true"]');
+    if (active) $("entries").scrollTop = active.offsetTop - $("entries").offsetTop - $("entries").clientHeight/2;
+  }
+}
+function go(i) {
+  index = Math.max(0, Math.min(packet.length-1, i));
+  if (matchMedia("(max-width:680px)").matches) $("side").open = false;
+  persist(); render(true); window.scrollTo(0,0);
+}
+$("entries").onclick = e => { const b=e.target.closest("button[data-index]"); if (b) go(Number(b.dataset.index)); };
+$("all").onclick = () => { onlyTodo=false; list(); }; $("todo").onclick = () => { onlyTodo=true; list(); };
+$("search").oninput = list; $("prev").onclick = () => go(index-1); $("next").onclick = () => go(index+1);
+$("help").onclick = () => { $("guide").hidden = !$("guide").hidden; $("help").setAttribute("aria-expanded", !$("guide").hidden); };
+$("exportBtn").onclick = () => {
+  const file = new Blob([JSON.stringify(state(),null,2)], {type:"application/json"});
+  const a = document.createElement("a"); a.href = URL.createObjectURL(file);
+  const n = reviewed(); a.download = "独立盲评-"+who+"-"+(n===packet.length?"结果":"进度")+"-"+n+".json";
+  document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href),30000);
+  notify(n===packet.length ? "结果已导出，请交回下载的 JSON 文件。" : "已导出进度。换设备时打开同一份网页，选择“导入进度”。");
+};
+$("importBtn").onclick = () => $("load").click();
+$("load").onchange = async () => {
+  const f=$("load").files[0]; if (!f) return;
+  try {
+    const incoming = JSON.parse(await f.text()); validate(incoming);
+    if (Object.keys(labels).length && !confirm("用这份文件的进度替换当前标注？")) return;
+    restore(incoming); notify(""); persist(); render(true);
+  } catch (e) { notify(e instanceof SyntaxError ? "无法读取 JSON 文件，请选择网页导出的进度。" : e.message); }
+  finally { $("load").value = ""; }
+};
+render(true);
+</script>
+</html>
