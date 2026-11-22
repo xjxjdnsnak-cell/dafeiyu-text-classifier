@@ -1,0 +1,36 @@
+{
+  "seed": "dafeiyu-prospective-20261122-01",
+  "start": "2026-11-14T00:00:00+08:00",
+  "stop": "2026-11-22T14:00:00+08:00",
+  "source": "November 20 metadata, six AI/plugin queries and six ordinary-topic queries. Eligible videos and uploaders unique in this draw. Choose the two highest metadata reply counts per query (break ties by BV); if exhausted, fill with same pool. Alternate assignment of first/second rank to natural and diagnostic within each pool.",
+  "pages": 2,
+  "page_size": 20,
+  "frame": "Time-sorted roots and inline replies returned by these pages, within [start,stop). Retain every eligible natural comment ID including repeated text. No score-based replacements. Report sampling scope and exclusions.",
+  "isolation": "Exclude previously observed BV/aid, UID, normalized full text and normalized mention-stripped body, including cross-form matches. Give natural videos precedence over diagnostic videos. Exclude empty normalized keys and keep an exclusion ledger. Historical disjointness is limited to available source identifiers.",
+  "diagnostic": "From disjoint diagnostic videos, include all eligible initially blocked addressed comments in the frozen intent model's routing scope, irrespective of rule/model agreement. Never pool with natural estimates.",
+  "style": [
+    "真人风格",
+    "AI风格",
+    "不确定"
+  ],
+  "intent": [
+    "请求或提问",
+    "非请求",
+    "不确定"
+  ],
+  "promotion": [
+    "有推广表达",
+    "无推广表达",
+    "不确定"
+  ],
+  "models": {
+    "v8": 0.9700783414714084,
+    "masked_v9": 0.9387965748548248,
+    "intent": 0.8,
+    "guard_commit": "3f218c7",
+    "intent_sha256": "96947ee285848af7f39ac7342ee7fcda8baf379d56e4fdfa82af8523475bf545"
+  },
+  "primary": "Paired reduction in blocks per 1,000 human-style comments and change in AI-style recall vs the old guard. One-sided deployment criterion for a later confirmatory test: recall loss <= 0.02 absolute; this pilot estimates uncertainty, no threshold changes or model promotion.",
+  "uncertainty": "Resample natural videos within each of the two topic pools, with replacement, 5000 repetitions, seed 20261122. Report undefined replicates. With few clusters or no discordant observations interpret percentile intervals descriptively.",
+  "review": "Two independent humans, masked mentions, no video/author/predictions, separate permutations, three independent dimensions. Report pre-adjudication agreement, Cohen kappa, class totals and uncertain fraction. Human adjudication for each conflicting field. Uncertain consensus remains a separate reported class."
+}
