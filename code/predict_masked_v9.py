@@ -2,7 +2,6 @@
 
 import argparse
 import json
-import re
 import sys
 from pathlib import Path
 
@@ -18,18 +17,13 @@ from bili_ai.cli import _batch
 from bili_ai.common import sha256
 from bili_ai.model import Predictor
 from bili_ai.preprocess import ASSETS
+from body_mentions import MENTION, mask_mentions
 from structure_features import encode_structure_augmented
 from text_policy import is_mention_only
 
 MODEL = ROOT / "models" / "sentence-structure" / "B" / "model.bin"
 MODEL_SHA256 = "0d2ea96fdd6d92880fc8d58411f07b1300e629bb896f5df8de7fda2bce5f40bc"
 THRESHOLD = 0.9387965748548248
-# Same pattern, placeholder and pre-normalization order as make_ablation_input.py.
-MENTION = re.compile(r"@([^\s@:：，,。！!?？]{1,24})")
-
-
-def mask_mentions(text):
-    return MENTION.sub("@某人", text)
 
 
 class MaskedBodyEncoder:

@@ -45,6 +45,10 @@ python code/predict_masked_v9.py batch --input comments.csv --output predictions
 
 候选在原文上将匹配到的每个 `@昵称` 替换为 `@某人`，然后计算冻结的 v9 正文词元和句式特征。沿用实验中的昵称边界与 24 字符匹配上限。空正文和仅提及的评论返回 `insufficient_input`。权重来自 `models/sentence-structure/B/model.bin`，触发阈值为 `0.9387965748548248`。
 
+### v10 正文候选
+
+v10 是用标点、称呼配对增强和 RoBERTa 软标签训练的 fastText。离线单条入口为 `python code/predict_v10.py predict --text "评论正文"`，批量使用 `python code/predict_v10.py batch --input comments.csv --output scores.jsonl`。本轮广义去标点改判由遮名 v9 的 77 条降到 29 条，双评自然子集的原文 AI 风格检出也从 29/39 降到 25/39。[训练方法、分项对照与复现](evaluation/v10/README.md)
+
 ## 目录
 
 ```

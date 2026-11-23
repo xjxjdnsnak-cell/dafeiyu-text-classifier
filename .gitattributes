@@ -1,2 +1,4 @@
 # The frozen tokenizer verifies the dictionary's original bytes on every platform.
 code/src/bili_ai/assets/jieba.dict.txt text eol=lf
+# The v10 bundle pins the original Windows bytes of the preprocessing manifest.
+code/src/bili_ai/assets/preprocess.json text eol=crlf
