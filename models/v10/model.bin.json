@@ -1,0 +1,79 @@
+{
+  "arm": "v10",
+  "mode": "text",
+  "encoder": "masked_v9_structure",
+  "threshold": 0.8021797936042725,
+  "validation": {
+    "threshold": 0.8021797936042725,
+    "max_validation_fpr": 0.01,
+    "selection_rule": "maximize recall under empirical FPR cap, then precision/F1, then larger threshold; score >= threshold",
+    "metrics": {
+      "precision": 0.9774436090225563,
+      "recall": 0.8167539267015707,
+      "f1": 0.8899030233884768,
+      "fpr": 0.009950248756218905,
+      "fpr_wilson_95": [
+        0.006303234389294134,
+        0.015674119795120945
+      ],
+      "confusion_matrix": [
+        [
+          1791,
+          18
+        ],
+        [
+          175,
+          780
+        ]
+      ],
+      "support": {
+        "normal": 1809,
+        "ai_style": 955
+      },
+      "predicted_positive": 798,
+      "abstentions": 0,
+      "coverage": 1.0
+    },
+    "degenerate_no_detections": false,
+    "caution": "验证集经验 FPR 上限不是总体误判率保证；小样本必须结合区间与人工复核。"
+  },
+  "dictionary_sha256": "7197c3211ddd98962b036cdf40324d1ea2bfaa12bd028e68faa70111a88e12a8",
+  "preprocess_sha256": "499cdc522aaeca863bab6be99f4f213925e5312c8a0299316e0b56fc74178bf8",
+  "model_sha256": "4de075887fcae580dbd1f94fca5e07cc46f266b714d51df5b9985d20e94e85d1",
+  "train_sha256": "d69a7baf883af5a888b7ef4e9d91db30a7260184fd08c9d3efd804fcb90de56c",
+  "validation_sha256": "f55bca4ba28f14b5716da9231e891c828166659321fac6366e3085182ebef3cd",
+  "params": {
+    "dim": 32,
+    "bucket": 20000,
+    "epoch": 4,
+    "lr": 0.5,
+    "wordNgrams": 2,
+    "minn": 2,
+    "maxn": 4,
+    "minCount": 1,
+    "loss": "softmax",
+    "thread": 1,
+    "seed": 42,
+    "verbose": 0
+  },
+  "unique_training_rows": 12961,
+  "views_per_row": 4,
+  "copies_per_view": 8,
+  "changed_encoded_views": {
+    "0": 0,
+    "1": 9265,
+    "2": 12884,
+    "3": 12884
+  },
+  "training_file_sha256": "5af8d3323afb7d2cad1ae040ed6257a9884bcb49ad59c5a928882339fec2a521",
+  "nonbinary_rows": 4658,
+  "teacher": {
+    "model.safetensors": "b401c041631282fe25fdb49af761b1deb422d4bdb4a1ac411a43bff56b477c25",
+    "config.json": "2840557d70c41bc33142d80ffb66649e570310488ed003000a3e6d1e0a246067",
+    "tokenizer.json": "1d3622ca59494120ff0b540cbd13c86ce05e675f5d470cf4e73fe4caa55d1980",
+    "tokenizer_config.json": "b3287ec27402e1f4a8081da3a1ee45a9b9d5738292282f22f6eb93b210814713"
+  },
+  "teacher_weight": 0.7,
+  "temperature": 2.0,
+  "teacher_cache_sha256": "0211c82b953002e5954f6ceb23705f7a4ea53a1a57c96fc603c238044344dca6"
+}
