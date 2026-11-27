@@ -45,6 +45,16 @@ python code/predict_masked_v9.py batch --input comments.csv --output predictions
 
 候选在原文上将匹配到的每个 `@昵称` 替换为 `@某人`，然后计算冻结的 v9 正文词元和句式特征。沿用实验中的昵称边界与 24 字符匹配上限。空正文和仅提及的评论返回 `insufficient_input`。权重来自 `models/sentence-structure/B/model.bin`，触发阈值为 `0.9387965748548248`。
 
+### TinyBERT 逐通道 INT8 ONNX 正文模型
+
+4 层中文 TinyBERT（`huawei-noah/TinyBERT_4L_zh` 同源遮名正文微调，逐通道 `QInt8` 动态量化，`/pooler/` 与 `/classifier/` 保留 FP32），权重与分词器位于 `models/tinybert-perchannel-int8/`（11.41 MB），冻结阈值 `0.9905704259872437`（按 2,764 条验证集 1% 误拦预算选定）。详见 `evaluation/tinybert-perchannel-int8/README.md`。
+
+```shell
+python code/predict_tinybert_onnx.py "回复 @测试用户 : 这条评论用于验证离线推理入口"
+```
+
+该模型与 v8 / v9 并存，不改变 `model/text/model.bin` 的发布状态。
+
 ## 目录
 
 ```
