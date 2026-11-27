@@ -1,0 +1,84 @@
+{
+  "model": "tinybert-perchannel-int8",
+  "artifact_file": "models/tinybert-perchannel-int8/tb-hard-perchannel-qint8.onnx",
+  "size_bytes": 11966761,
+  "size_mb": 11.41,
+  "model_sha256": "72af82be617ab6b01c5373a546bb3e103418decc03079a83dfd626a7242289aa",
+  "tokenizer_sha256": "a7a002f10a1b86cfec8d77a14bfdbde8c556499091dca2d1523e94d3de1a6c6b",
+  "threshold": 0.9905704259872437,
+  "threshold_selection": "1% validation FPR cap on 2,764 validation rows (mention-masked body only)",
+  "validation_2764": {
+    "rows": 2764,
+    "pos": 955,
+    "neg": 1809,
+    "recall": 0.9089005235602095,
+    "fpr": 0.009950248756218905,
+    "ap": 0.9854797753805293,
+    "p95_abs_diff_vs_fp32": 0.011930245161056419,
+    "max_abs_diff_vs_fp32": 0.6538892984390259
+  },
+  "historical_holdout_2379_tok_dedup": {
+    "rows": 2379,
+    "pos": 697,
+    "neg": 1682,
+    "tp": 393,
+    "fp": 2,
+    "recall": 0.563845050215208,
+    "fpr": 0.0011890606420927466,
+    "ap": 0.9313292845999347
+  },
+  "style_blind_228_weighted": {
+    "rows": 228,
+    "tp_raw": 121,
+    "pos_raw": 129,
+    "fp_raw": 2,
+    "neg_raw": 99,
+    "weighted_recall": 0.8625351504973131,
+    "weighted_fpr": 0.011697547406514276,
+    "weighted_ap": 0.9554287987747916,
+    "note": "Reused 228-row blind benchmark for model comparison; not an independent prospective confirmation."
+  },
+  "quantization_comparison_on_tb_hard": {
+    "fp32": {
+      "size_mb": 43.64,
+      "val_recall": 0.9204,
+      "val_p95_diff": 0.0,
+      "blind_recall": 0.8625,
+      "blind_fpr": 0.0158,
+      "blind_ap": 0.9573
+    },
+    "pertensor_quint8": {
+      "size_mb": 11.36,
+      "val_recall": 0.8984,
+      "val_p95_diff": 0.0569,
+      "blind_recall": 0.8279,
+      "blind_fpr": 0.0146,
+      "blind_ap": 0.9519
+    },
+    "perchannel_qint8_selected": {
+      "size_mb": 11.41,
+      "val_recall": 0.9089,
+      "val_p95_diff": 0.0119,
+      "blind_recall": 0.8625,
+      "blind_fpr": 0.0117,
+      "blind_ap": 0.9554
+    },
+    "fp16": {
+      "size_mb": 21.91,
+      "val_recall": 0.9204,
+      "val_p95_diff": 0.00007,
+      "blind_recall": 0.8625,
+      "blind_fpr": 0.0158,
+      "blind_ap": 0.9573
+    }
+  },
+  "android_device_benchmark": {
+    "device": "arm64-v8a flagship smartphone (Dimensity 9400, Android 17)",
+    "runtime": "ONNX Runtime Android CPUExecutionProvider (unpadded sequential batch=1, 100 real tokenized comments)",
+    "threads_1": {"load_ms": 88.3, "p50_ms": 3.23, "p95_ms": 8.21, "page20_ms": 94.3, "rss_delta_mb": 46.8},
+    "threads_2": {"load_ms": 70.8, "p50_ms": 2.64, "p95_ms": 6.25, "page20_ms": 73.8, "rss_delta_mb": 46.9},
+    "threads_4": {"load_ms": 71.4, "p50_ms": 1.93, "p95_ms": 4.33, "page20_ms": 51.1, "rss_delta_mb": 47.3},
+    "padded_batch20_threads_4_ms": 94.2,
+    "fp16_page20_threads_4_ms": 263.6
+  }
+}

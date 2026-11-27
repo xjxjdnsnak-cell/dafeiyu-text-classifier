@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "name": "tinybert-perchannel-int8",
+  "artifact_file": "tb-hard-perchannel-qint8.onnx",
+  "size_bytes": 11966761,
+  "model_sha256": "72af82be617ab6b01c5373a546bb3e103418decc03079a83dfd626a7242289aa",
+  "tokenizer_file": "tokenizer.json",
+  "tokenizer_sha256": "a7a002f10a1b86cfec8d77a14bfdbde8c556499091dca2d1523e94d3de1a6c6b",
+  "tokenizer_config_sha256": "6caa246ea2b4e7d61a9026e9298d7c1a74460e3ccf599ceba9318c5adaf49b69",
+  "base_model": "huawei-noah/TinyBERT_4L_zh",
+  "base_revision": "152bf15d86715b41dd89c1e03cf5664963d9b005",
+  "parent_checkpoint": {
+    "arm": "TB-Hard",
+    "best_epoch": 4,
+    "weights_sha256": "503acceaa0f35188b9323a1dba6bf27ea91a89cf3da57665d2c4eec34e551b6c",
+    "fp32_onnx_sha256": "223deb9610c9de8ff45a8d367c51471ca895eae5299c8b6b25f83f27a4028cc0"
+  },
+  "quantization": {
+    "method": "onnxruntime.quantization.quantize_dynamic",
+    "weight_type": "QInt8",
+    "per_channel": true,
+    "op_types_to_quantize": ["MatMul", "Gather"],
+    "matmul_const_b_only": true,
+    "excluded_subgraphs": ["/pooler/", "/classifier/"],
+    "onnx_ir_version": 8,
+    "onnx_opset": 17
+  },
+  "preprocessing": {
+    "body_only": true,
+    "mention_pattern": "@([^\\s@:：，,。！!?？]{1,24})",
+    "mention_replacement": "@某人",
+    "mention_only_policy": "skip_before_scoring",
+    "max_length": 128,
+    "do_lower_case": false
+  },
+  "threshold": 0.9905704259872437,
+  "threshold_source": "validation_2764_1pct_fpr_cap",
+  "probability_rule": "softmax(logits)[1]",
+  "label_rule": "score >= threshold",
+  "training_summary": {
+    "train_rows": 12961,
+    "train_pos": 4431,
+    "train_neg": 8530,
+    "val_rows": 2764,
+    "val_pos": 955,
+    "val_neg": 1809,
+    "epochs": 4,
+    "batch_size": 16,
+    "learning_rate": 2e-5,
+    "weight_decay": 0.01,
+    "seed": 42,
+    "loss": "cross_entropy"
+  }
+}
